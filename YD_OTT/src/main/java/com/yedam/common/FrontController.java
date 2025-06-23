@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.yedam.control.MainControl;
+
 public class FrontController extends HttpServlet{
 // url pattern을 key , value 로 관리
 	
@@ -22,6 +24,17 @@ public class FrontController extends HttpServlet{
 	@Override
 	public void init(ServletConfig config) throws ServletException {
 		// 메인 페이지
+		map.put("/main.do",new MainControl() );
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		// 로그인페이지
 		
