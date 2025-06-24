@@ -59,14 +59,14 @@
 <!-- Footer Section Begin -->
 <tiles:insertAttribute name="footer" />
 <!-- Js Plugins -->
-<script src="/YD_OTT/js/jquery-3.3.1.min.js"></script>
-<script src="/YD_OTT/js/bootstrap.min.js"></script>
-<script src="/YD_OTT/js/player.js"></script>
-<script src="/YD_OTT/js/jquery.nice-select.min.js"></script>
-<script src="/YD_OTT/js/mixitup.min.js"></script>
-<script src="/YD_OTT/js/jquery.slicknav.js"></script>
-<script src="/YD_OTT/js/owl.carousel.min.js"></script>
-<script src="/YD_OTT/js/main.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery-3.3.1.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/player.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery.nice-select.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/mixitup.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery.slicknav.js"></script>
+<script src="${pageContext.request.contextPath}/js/owl.carousel.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/main.js"></script>
 
 </body>
 
