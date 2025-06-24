@@ -1,22 +1,44 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<div class="border-end bg-white" id="sidebar-wrapper">
-                <div class="sidebar-heading border-bottom bg-light">Start Bootstrap</div>
-                <div class="list-group list-group-flush">
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="boardList.do">글 목록</a>
-                    <c:choose>
-                    <c:when test="${empty logId}">
-                        <!-- 비로그인 상태 -->
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="loginForm.do">로그인</a>
-                      </c:when>
-                    <c:otherwise>
-                        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="logout.do">로그아웃(${logId })</a>
-                      </c:otherwise>
-                    </c:choose>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="allProduct.do">제품</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="chart.do">Chart</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="selectable.html">FullCalendar</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="signup.do">회원가입</a>
+    <!-- Hero Section Begin -->
+    
+        
+            <div class="hero__slider owl-carousel">
+                <div class="hero__items set-bg" data-setbg="/YD_OTT/img/hero/hero-1.jpg">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="hero__text">
+                                <div class="label">Adventure</div>
+                                <h2>Fate / Stay Night: Unlimited Blade Works</h2>
+                                <p>After 30 days of travel across the world...</p>
+                                <a href="#"><span>Watch Now</span> <i class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+                <div class="hero__items set-bg" data-setbg="/YD_OTT/img/hero/hero-1.jpg">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="hero__text">
+                                <div class="label">Adventure</div>
+                                <h2>Fate / Stay Night: Unlimited Blade Works</h2>
+                                <p>After 30 days of travel across the world...</p>
+                                <a href="#"><span>Watch Now</span> <i class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__items set-bg" data-setbg="/YD_OTT/img/hero/hero-1.jpg">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="hero__text">
+                                <div class="label">Adventure</div>
+                                <h2>Fate / Stay Night: Unlimited Blade Works</h2>
+                                <p>After 30 days of travel across the world...</p>
+                                <a href="#"><span>Watch Now</span> <i class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</div>
