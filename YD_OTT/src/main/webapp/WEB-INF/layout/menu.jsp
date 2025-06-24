@@ -5,7 +5,7 @@
     
         
             <div class="hero__slider owl-carousel">
-                <div class="hero__items set-bg" data-setbg="/YD_OTT/img/hero/hero-1.jpg">
+                <div class="hero__items set-bg" data-setbg="${pageContext.request.contextPath}/img/hero/hero-1.jpg">
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="hero__text">
@@ -17,7 +17,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="hero__items set-bg" data-setbg="/YD_OTT/img/hero/hero-1.jpg">
+                <div class="hero__items set-bg" data-setbg="${pageContext.request.contextPath}/img/hero/hero-1.jpg">
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="hero__text">
@@ -29,7 +29,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="hero__items set-bg" data-setbg="/YD_OTT/img/hero/hero-1.jpg">
+                <div class="hero__items set-bg" data-setbg="${pageContext.request.contextPath}/img/hero/hero-1.jpg">
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="hero__text">
