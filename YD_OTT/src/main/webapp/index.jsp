@@ -56,7 +56,7 @@ h3 , h2 {
 </div>
 <script>
 document.querySelector('#gotoIdx').addEventListener('click', function(){
-	location.href='user/index.tiles';
+	location.href='product/movieList.tiles';
 });
 function openNewWindow(){
 	var newWindow = window.open("","_blank");

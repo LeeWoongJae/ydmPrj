@@ -15,8 +15,8 @@ public class MovieServiceImpl implements MovieService {
 	@Override
 	public List<MovieVO> movieList() {
 		// 영화목록(영화아이디필요)
-		List<MovieVO> list = mapper.selectList();
-		return list;
+		
+		return mapper.selectList();
 	}
 
 }

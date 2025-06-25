@@ -27,7 +27,7 @@ public class MovieListControl implements Control {
 
 		MovieService mvc = new MovieServiceImpl();
 		List<MovieVO> list = mvc.movieList();
-
+		System.out.println("list목록을 출력합니다 메세지");
 		req.setAttribute("list", list);
 		
 		req.getRequestDispatcher("product/movieList.tiles").forward(req, resp);
