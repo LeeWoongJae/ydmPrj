@@ -95,7 +95,7 @@ public class FrontController extends HttpServlet{
 		// watch ott list page
 		map.put("/watchList.do", new WatchListControl()); // 시청기록 리스트
 		map.put("/addWatchProd.do", new AddWatchProdControl()); // 시청기록 추가
-		map.put("playProd.do", new PlayProdControl()); // 재생
+		map.put("/playProd.do", new PlayProdControl()); // 재생
 		
 		
 		

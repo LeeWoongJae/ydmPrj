@@ -44,12 +44,8 @@ h3 , h2 {
 <td>4 조</td><td>NOTNULL</td><td>이명훈</td><td>팀원</td>
 <td><a href="https://github.com/" target="_blank">github.com/</a></td>
 </tr>
-
-<tr>
-<td>4 조</td><td>NOTNULL</td><td>김준현</td><td>팀원</td>
-<td><a href="https://github.com/" target="_blank">github.com/</a></td>
-</tr>
 </table>
+
 <div class="btnDiv">
 <button type="button" class="col-sm-3 btn btn-primary" id="gotoIdx" >우리집으로가자</button>
 </div>
