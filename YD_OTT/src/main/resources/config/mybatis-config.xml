@@ -23,9 +23,22 @@
     </environment>
   </environments>
   <mappers> <!-- QUERY를 담는 XML -->
-    <mapper resource="com/yedam/mapper/BoardMapper.xml"/>
-    <mapper resource="com/yedam/mapper/MemberMapper.xml"/>
-    <mapper resource="com/yedam/mapper/ReplyMapper.xml"/>
+    <mapper resource="com/yedam/mapper/MovieMapper.xml"/>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
   </mappers>
 </configuration>
