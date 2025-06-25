@@ -28,8 +28,8 @@
                                 <li><a href="./blog.html">Our Blog</a></li>
                                 <li><a href="#">Contacts</a></li>
                                 <c:if test="${logId !=null }">                                
-                                <li><a href="${pageContext.request.contextPath}/membership/membership.tiles">Membership</a></li>
                                 </c:if>
+                                <li><a href="${pageContext.request.contextPath}/membership/membership.tiles">Membership</a></li>
                             </ul>
                         </nav>
                     </div>

@@ -3,8 +3,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
     <!-- Hero Section Begin -->
     
-        
-            <div class="hero__slider owl-carousel">
+        <!-- div class d-flex p-2 추가해서 유연하게 상하좌우 띄워서 표기 -->
+            <div class="hero__slider owl-carousel d-flex p-2">
                 <div class="hero__items set-bg" data-setbg="${pageContext.request.contextPath}/img/hero/hero-1.jpg">
                     <div class="row">
                         <div class="col-lg-6">
