@@ -30,6 +30,7 @@
 </head>
 
 <body>
+
     <!-- Page Preloder -->
     <!-- 
     <div id="preloder">
@@ -38,17 +39,34 @@
      -->
     <!-- Header Section Begin -->
    <header class="header">
+   <div class="container">
    <tiles:insertAttribute name ="header" />
+   </div>
    </header>
     <!-- Header End -->
 
     <!-- Hero Section Begin -->
-        <section class="hero">
-        <tiles:insertAttribute name="body" />
-  </section>
+    <section class="hero">
+    <div class="container">
+    <tiles:insertAttribute name="menu" />
+    </div>
+    </section>
+    <!-- Hero Section End -->
+    
+    <tiles:insertAttribute name="body" />
+  
 <!-- Product Section End -->
 <!-- Footer Section Begin -->
 <tiles:insertAttribute name="footer" />
+<!-- Js Plugins -->
+<script src="${pageContext.request.contextPath}/js/jquery-3.3.1.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/player.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery.nice-select.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/mixitup.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery.slicknav.js"></script>
+<script src="${pageContext.request.contextPath}/js/owl.carousel.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/main.js"></script>
 
 </body>
 
