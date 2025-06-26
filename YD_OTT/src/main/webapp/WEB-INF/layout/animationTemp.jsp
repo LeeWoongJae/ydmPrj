@@ -54,8 +54,6 @@
                                 <li><a href="./categories.html">Categories <span class="arrow_carrot-down"></span></a>
                                     <ul class="dropdown">
                                         <li><a href="./categories.html">Categories</a></li>
-                                        <li><a href="./anime-details.html">Anime Details</a></li>
-                                        <li><a href="./anime-watching.html">Anime Watching</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">Contacts</a></li>
@@ -79,7 +77,7 @@
     <!-- Header End -->
 
     <!-- Hero Section Begin -->
-   
+    
     <!-- Hero Section End -->
 
     <!-- Product Section Begin -->
@@ -91,8 +89,8 @@
                   <tiles:insertAttribute name="body" />  
                 </div>
                 <!-- content... -->
-                
-                
+
+
 			</div>
 		</div>
 </section>

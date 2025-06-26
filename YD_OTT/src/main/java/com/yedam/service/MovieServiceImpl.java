@@ -18,5 +18,10 @@ public class MovieServiceImpl implements MovieService {
 		
 		return mapper.selectList();
 	}
+	
+	@Override
+	public MovieVO getMovie(int movieId) {
+		return mapper.selectMovie(movieId);
+	}
 
 }
