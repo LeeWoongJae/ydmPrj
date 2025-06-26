@@ -15,5 +15,19 @@
 		       star_count,
 		       view_count from movie
 	</select>
+	
+	<!-- 상세검색 -->
+	<select id="selectMovie" resultType="com.yedam.vo.MovieVO">
+		select movie_id,
+		       genre_id,
+		       title,
+		       description,
+		       thumbnail,
+		       video_url,
+		       total_star,
+		       star_count,
+		       view_count from movie
+		       where movie_id = #{movieId}
+	</select>
 
 </mapper>
