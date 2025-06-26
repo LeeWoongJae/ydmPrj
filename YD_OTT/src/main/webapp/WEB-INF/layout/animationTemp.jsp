@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -49,7 +50,7 @@
                     <div class="header__nav">
                         <nav class="header__menu mobile-menu">
                             <ul>
-                                <li class="active"><a href="./index.html">Homepage</a></li>
+                                <li class="active"><a href="${pageContext.request.contextPath}/main.do">Homepage</a></li>
                                 <li><a href="./categories.html">Categories <span class="arrow_carrot-down"></span></a>
                                     <ul class="dropdown">
                                         <li><a href="./categories.html">Categories</a></li>
@@ -57,8 +58,10 @@
                                         <li><a href="./anime-watching.html">Anime Watching</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="./blog.html">Our Blog</a></li>
                                 <li><a href="#">Contacts</a></li>
+                                <c:if test="${logId != null}">
+                                </c:if>
+                                <li><a href="${pageContext.request.contextPath}/membership.do">Membership</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -110,7 +113,7 @@
             <div class="col-lg-6">
                 <div class="footer__nav">
                     <ul>
-                        <li class="active"><a href="./index.html">Homepage</a></li>
+                        <li class="active"><a href="${pageContext.request.contextPath}/main.do">Homepage</a></li>
                         <li><a href="./categories.html">Categories</a></li>
                         <li><a href="./blog.html">Our Blog</a></li>
                         <li><a href="#">Contacts</a></li>

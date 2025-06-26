@@ -34,6 +34,20 @@
     
     
     
+    <!-- 맴버쉽매퍼 -->
+    <mapper resource="com/yedam/mapper/MembershipMapper.xml"/>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     

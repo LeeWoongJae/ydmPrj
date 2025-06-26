@@ -113,18 +113,22 @@
 </style>
 </head>
 <body>
+<section>
+
 <h2 class="text-light fs-1" align="center">원하는 플랜을 선택하세요.</h2>
 
-			<div class="row row-cols-2 row-cols-md-4 mb-3 text-center d-flex p-2">
+</section>
+			<div class="row g-2 text-center">
 			<!-- 3일 맴버쉽 -->
-				<div class="col">
+				<div class="col col-6">
 					<div class="card mb-2 rounded-3 shadow-sm">
 						<div class="card-header py-3">
 							<h4 class="my-0 fw-normal">3 DAYS</h4>
 						</div>
 						<div class="card-body">
 							<h1 class="card-title pricing-card-title">
-								￦7,700
+								<span class="mbsprice">￦7,700</span>
+								<input type="hidden" name="mbscode" value="1">
 							</h1>
 							<ul class="list-unstyled mt-3 mb-4">
 								<li>128명의 사용자들이 가입했어요</li>
@@ -138,59 +142,62 @@
 					</div>
 				</div>
 				<!-- 7일 맴버쉽 -->
-				<div class="col">
+				<div class="col col-6">
 					<div class="card mb-2 rounded-3 shadow-sm">
 						<div class="card-header py-3">
 							<h4 class="my-0 fw-normal">7 DAYS</h4>
 						</div>
 						<div class="card-body">
 							<h1 class="card-title pricing-card-title">
-								￦11,000
+								<span class="mbsprice">￦11,000</span>
+								<input type="hidden" name="mbscode" value="2">
 							</h1>
 							<ul class="list-unstyled mt-3 mb-4">
 								<li>256명의 사용자들이 가입했어요</li>
 								<li>일주일간 저렴한 가격으로 영상을 시청해봐요</li>
 								
 							</ul>
-							<button type="button" class="w-100 btn btn-lg btn-primary">Sign up
+							<button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up
 								for membership</button>
 						</div>
 					</div>
 				</div>
-				<div class="col">
+				<div class="col col-6">
 					<div class="card mb-2 rounded-3 shadow-sm border-primary">
 						<div class="card-header py-3 text-bg-primary border-primary">
 							<h4 class="my-0 fw-normal">15 DAYS</h4>
 						</div>
 						<div class="card-body">
 							<h1 class="card-title pricing-card-title">
-								￦18,000
+								<span class="mbsprice">￦18,000</span>
+								<input type="hidden" name="mbscode" value="3">
 							</h1>
 							<ul class="list-unstyled mt-3 mb-4">
 								<li>512명의 사용자들이 가입했어요</li>
 								<li>15일간 저렴한 가격으로 영상을 시청해봐요</li>
 								
 							</ul>
-							<button type="button" class="w-100 btn btn-lg btn-primary">Sign up
+							<button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up
 								for membership</button>
 						</div>
 					</div>
 				</div>
-				<div class="col">
+				<div class="col col-6">
 					<div class="card mb-2 rounded-3 shadow-sm border-primary">
 						<div class="card-header py-3 text-bg-primary border-primary">
 							<h4 class="my-0 fw-normal">30 DAYS</h4>
 						</div>
 						<div class="card-body">
 							<h1 class="card-title pricing-card-title">
-								￦22,000
+								<span class="mbsprice">￦22,000</span>
+								<input type="hidden" name="mbscode" value="4">
 							</h1>
 							<ul class="list-unstyled mt-3 mb-4">
 								<li>1024명의 사용자들이 가입했어요</li>
 								<li>한달간 저렴한 가격으로 영상을 시청해봐요</li>
 								
 							</ul>
-							<button type="button" class="w-100 btn btn-lg btn-primary">Sign up
+							<button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up
 								for membership</button>
 						</div>
 					</div>
@@ -200,6 +207,10 @@
 	<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
 		class="astro-vvvwv3sm"></script>
+		<script src="${pageContext.request.contextPath}/js/membership.js"></script>
+<script>
+
+</script>
 </body>
 </html>
 

@@ -27,7 +27,6 @@ object-fit: cover;
 </style>
 
 <div class="show">
-<img src="img/hero/hero-1.jpg">
 <div class="btnDiv">
 <button type="button" class="col-sm-3 btn btn-primary" id="gotoIdx" >JOIN THE PROGRAM</button>
 </div>
