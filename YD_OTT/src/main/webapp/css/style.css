@@ -141,7 +141,7 @@ ol {
 .set-bg {
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: top center;
+	background-position: center;
 }
 
 .spad {
@@ -442,7 +442,7 @@ ol {
 -----------------------*/
 
 .hero {
-	padding-top: 50px;
+	padding-top:50px;
 }
 
 .hero__items {
@@ -622,10 +622,15 @@ ol {
 -----------------------*/
 
 .product {
-	padding-bottom: 60px;
-	padding-top: 80px;
+	padding-bottom: 30px;
+	padding-top: 0px;
 }
-
+.product__item__pic{ 
+	position: relative; }
+.product__item__pic .cover-link {
+  position: absolute; inset: 0;      /* top:0; right:0; bottom:0; left:0; */
+  z-index: 5;                        /* 다른 요소보다 앞에 와야 클릭됨 */
+}
 .product-page {
 	padding-top: 60px;
 }
