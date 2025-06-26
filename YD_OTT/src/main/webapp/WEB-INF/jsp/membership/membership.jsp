@@ -203,11 +203,14 @@
 					</div>
 				</div>
 			</div>
-			
+			<!-- session login id check -->
+			<div>
+			<p>현재 로그인된 계정 아이디 : ${logId}</p>
+			</div>
 	<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
 		class="astro-vvvwv3sm"></script>
-		<script src="${pageContext.request.contextPath}/js/membership.js"></script>
+<script src="${pageContext.request.contextPath}/js/membership.js"></script>		
 <script>
 
 </script>

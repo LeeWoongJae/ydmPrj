@@ -59,7 +59,16 @@
                                 <li><a href="#">Contacts</a></li>
                                 <c:if test="${logId != null}">
                                 </c:if>
-                                <li><a href="${pageContext.request.contextPath}/membership.do">Membership</a></li>
+                                <c:choose>
+                                        <c:when test="${logId == null}">
+                                            <li><a href="${pageContext.request.contextPath}/signUp.do">Sign Up</a></li>
+                                            <li><a href="${pageContext.request.contextPath}/loginForm.do">Login</a></li>
+                                        </c:when>
+                                        <c:otherwise>
+                                            <li><a href="${pageContext.request.contextPath}/logout.do">Logout</a></li>
+                                			<li><a href="${pageContext.request.contextPath}/membership.do">Membership</a></li>
+                                        </c:otherwise>
+                                    </c:choose>
                             </ul>
                         </nav>
                     </div>
@@ -67,7 +76,24 @@
                 <div class="col-lg-2">
                     <div class="header__right">
                         <a href="#" class="search-switch"><span class="icon_search"></span></a>
-                        <a href="${pageContext.request.contextPath}/member/login.tiles"><span class="icon_profile"></span></a>
+                        <!--  <a href="${pageContext.request.contextPath}/member/login.tiles"><span class="icon_profile"></span></a>-->
+                        
+                         <!-- 로그인 여부에 따라 사용자 이름 및 프로필 -->
+                    <c:choose>
+                        <c:when test="${!empty logId}">
+                            <span style="color: white; margin-right: 10px;">
+                                ${logId}님
+                            </span>
+                            <a href="${pageContext.request.contextPath}/logout.do">
+                                <span class="icon_profile"></span>
+                            </a>
+                        </c:when>
+                        <c:otherwise>
+                            <a href="${pageContext.request.contextPath}/loginForm.do">
+                                <span class="icon_profile"></span>
+                            </a>
+                        </c:otherwise>
+                    </c:choose>
                     </div>
                 </div>
             </div>
@@ -149,8 +175,10 @@
 <script src="${pageContext.request.contextPath}/js/jquery.slicknav.js"></script>
 <script src="${pageContext.request.contextPath}/js/owl.carousel.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/main.js"></script>
-
-
+<script>
+let logId = "${loginMember}";
+console.log("login_id:"+logId);
+</script>
 </body>
 
 </html>

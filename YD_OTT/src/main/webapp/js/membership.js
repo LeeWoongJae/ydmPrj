@@ -3,7 +3,6 @@
  */
 
 // 세션 아이디 정보 가져오기
-let logId = "${loginUser}";
 console.log("LOGIN ID : "+logId);
 // 구독할 맴버쉽 search
 let btn = document.querySelectorAll(".btn");
@@ -14,7 +13,7 @@ btn.forEach(function(e){
 	let mbscode = ev.target.parentElement.querySelector('input[name="mbscode"]').value;
 	console.log("선택하신 맴버쉽 코드는 : "+mbscode);
 	
-	fetch('registMembership.do?'+logId+"&planNo="+mbscode)
+	fetch('registMembership.do?memberId='+logId+'&planNo='+mbscode)
 	.then(data => data.json())
 	.then(result=>{
 	let resVal = result.retVal;

@@ -58,33 +58,34 @@
                 <div class="col-lg-6">
                     <div class="login__form">
                         <h3>Sign Up</h3>
-                        <form action="#">
+                        <form action="registmembership.do" method="post">
                             <div class="input__item">
-                                <input type="text" placeholder="Your ID">
+                                <input type="text" name="memberId" placeholder="Your ID">
+                                <span class="icon_profile"></span>
                             </div>
                             <div class="input__item">
-                                <input type="text" placeholder="Password">
+                                <input type="text" name="password" placeholder="Password">
                                 <span class="icon_lock"></span>
                             </div>
                             <div class="input__item">
-                                <input type="text" placeholder="Your Name">
-                                <span class="icon_lock"></span>
+                                <input type="text" name="username" placeholder="Your Name">
+                                <span class="icon_profile"></span>
                             </div>
                             <div class="input__item">
-                                <input type="text" placeholder="Your Email">
-                                <span class="icon_lock"></span>
+                                <input type="text" name="email" placeholder="Your Email">
+                                <span class="icon_mail"></span>
                             </div>
                             <div class="input__item">
-                                <input type="text" placeholder="Your Phone">
-                                <span class="icon_lock"></span>
+                                <input type="text" name="phone" placeholder="Your Phone">
+                                <span class="icon_phone"></span>
                             </div>
                             <div class="input__item">
-                                <input type="text" placeholder="Your Birthdate">
-                                <span class="icon_lock"></span>
+                                <input type="text" name="birth" placeholder="Your Birthdate (ex>881015)">
+                                <span class="icon_calendar"></span>
                             </div>
                             <button type="submit" class="site-btn">Login Now</button>
                         </form>
-                        <h5>Already have an account? <a href="#">Log In!</a></h5>
+                        <h5>Already have an account? <a href="${pageContext.request.contextPath}/login.do">Log In!</a></h5>
                     </div>
                     <div class="col-lg-6">
                 </div>

@@ -14,6 +14,7 @@ import com.yedam.control.AddRevuControl;
 import com.yedam.control.AddWatchProdControl;
 import com.yedam.control.AddWishControl;
 import com.yedam.control.LoginControl;
+import com.yedam.control.LoginFormControl;
 import com.yedam.control.LogoutControl;
 import com.yedam.control.MainControl;
 import com.yedam.control.MemberInfoControl;
@@ -48,11 +49,11 @@ public class FrontController extends HttpServlet{
 		
 		// member page
 		map.put("/memberInfo.do", new MemberInfoControl()); // 회원정보 - 마이페이지
-		map.put("/registMember.do", new RegistMemberControl()); // 회원 가입
+		map.put("/signUp.do", new RegistMemberControl()); // 회원 가입
 		map.put("/removeMember.do", new RemoveMemberControl()); // 회원 탈퇴
 		map.put("/login.do", new LoginControl()); // 로그인
 		map.put("/logout.do", new LogoutControl()); // 로그아웃)
-		
+		map.put("/loginForm.do", new LoginFormControl()); // 로그인폼
 		
 		
 		

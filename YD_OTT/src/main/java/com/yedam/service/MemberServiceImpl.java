@@ -5,6 +5,7 @@ import org.apache.ibatis.session.SqlSession;
 
 import com.yedam.common.DataSource;
 import com.yedam.mapper.MemberMapper;
+import com.yedam.vo.MemberDTO;
 import com.yedam.vo.MemberVO;
 
 public class MemberServiceImpl implements MemberService {
@@ -18,9 +19,21 @@ public class MemberServiceImpl implements MemberService {
 	}
 
 	@Override
-	public MemberVO login(String id,String pw) {
+	public MemberDTO login(String memberId) {
 		
-		return mapper.login(id , pw);
+		return mapper.login(memberId);
+	}
+
+	@Override
+	public MemberDTO loginCheck(MemberDTO member) {
+		// TODO Auto-generated method stub
+		return mapper.loginCheck(member);
+	}
+
+	@Override
+	public int insertMember(MemberDTO member) {
+		// TODO Auto-generated method stub
+		return mapper.insertMember(member);
 	}
 
 }
