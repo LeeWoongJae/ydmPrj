@@ -14,42 +14,26 @@ h3 , h2 {
 	text-align : center;
 }
 .show{
- border:solid 10px #ccc;
+ border:solid 3px #ccc;
  margin : 10px;
  padding : 30%;
 }
+img{
+ width: 100%;
+  height: 100%;
+object-fit: cover;
+ 
+}
 </style>
+
 <div class="show">
-<h3>환영합니다.</h3>
-<h2>YEDAM OTT PROJECT</h2>
-<h3>4조</h3>
-<div class="aTagDiv">
-<button type="button" class="col-sm-2 btn btn-info" onclick="openNewWindow()" id="notionId">GO TO : NOTION</button>
-</div>
-<table class="table">
-<tr>
-<th>조 번호</th><th>팀 명</th><th>조원이름</th><th>역할</th><th>GITHUB</th>
-</tr>
-<tr>
-<td>4 조</td><td>NOTNULL</td><td>이웅재</td><td>팀장</td>
-<td><a href="https://github.com/LeeWoongJae" target="_blank">github.com/LeeWoongJae</a></td>
-</tr>
-
-<tr>
-<td>4 조</td><td>NOTNULL</td><td>김상우</td><td>팀원</td>
-<td><a href="https://github.com/" target="_blank">github.com/</a></td>
-</tr>
-
-<tr>
-<td>4 조</td><td>NOTNULL</td><td>이명훈</td><td>팀원</td>
-<td><a href="https://github.com/" target="_blank">github.com/</a></td>
-</tr>
-</table>
-
+<img src="img/hero/hero-1.jpg">
 <div class="btnDiv">
-<button type="button" class="col-sm-3 btn btn-primary" id="gotoIdx" >우리집으로가자</button>
+<button type="button" class="col-sm-3 btn btn-primary" id="gotoIdx" >JOIN THE PROGRAM</button>
 </div>
 </div>
+
+
 <script>
 document.querySelector('#gotoIdx').addEventListener('click', function(){
 	location.href='product/movieList.tiles';

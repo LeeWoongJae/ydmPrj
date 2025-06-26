@@ -10,7 +10,6 @@
 <meta name="author"
 	content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
 <meta name="generator" content="Astro v5.7.10">
-<title>Pricing example · Bootstrap v5.3</title>
 <link rel="canonical"
 	href="https://getbootstrap.kr/docs/5.3/examples/pricing/">
 <script src="/docs/5.3/assets/js/color-modes.js"></script>
@@ -117,84 +116,82 @@
 <h2 class="text-light fs-1" align="center">원하는 플랜을 선택하세요.</h2>
 
 			<div class="row row-cols-2 row-cols-md-4 mb-3 text-center d-flex p-2">
+			<!-- 3일 맴버쉽 -->
 				<div class="col">
 					<div class="card mb-2 rounded-3 shadow-sm">
 						<div class="card-header py-3">
-							<h4 class="my-0 fw-normal">Free</h4>
+							<h4 class="my-0 fw-normal">3 DAYS</h4>
 						</div>
 						<div class="card-body">
 							<h1 class="card-title pricing-card-title">
-								$0<small class="text-body-secondary fw-light">/mo</small>
+								￦7,700
 							</h1>
 							<ul class="list-unstyled mt-3 mb-4">
-								<li>10 users included</li>
-								<li>2 GB of storage</li>
-								<li>Email support</li>
-								<li>Help center access</li>
+								<li>128명의 사용자들이 가입했어요</li>
+								<li>3일간 저렴한 가격으로 영상을 시청해봐요</li>
+								
 							</ul>
 							<button type="button"
 								class="w-100 btn btn-lg btn-outline-primary">Sign up
-								for free</button>
+								for membership</button>
 						</div>
 					</div>
 				</div>
+				<!-- 7일 맴버쉽 -->
 				<div class="col">
 					<div class="card mb-2 rounded-3 shadow-sm">
 						<div class="card-header py-3">
-							<h4 class="my-0 fw-normal">Pro</h4>
+							<h4 class="my-0 fw-normal">7 DAYS</h4>
 						</div>
 						<div class="card-body">
 							<h1 class="card-title pricing-card-title">
-								$15<small class="text-body-secondary fw-light">/mo</small>
+								￦11,000
 							</h1>
 							<ul class="list-unstyled mt-3 mb-4">
-								<li>20 users included</li>
-								<li>10 GB of storage</li>
-								<li>Priority email support</li>
-								<li>Help center access</li>
+								<li>256명의 사용자들이 가입했어요</li>
+								<li>일주일간 저렴한 가격으로 영상을 시청해봐요</li>
+								
 							</ul>
-							<button type="button" class="w-100 btn btn-lg btn-primary">Get
-								started</button>
+							<button type="button" class="w-100 btn btn-lg btn-primary">Sign up
+								for membership</button>
 						</div>
 					</div>
 				</div>
 				<div class="col">
 					<div class="card mb-2 rounded-3 shadow-sm border-primary">
 						<div class="card-header py-3 text-bg-primary border-primary">
-							<h4 class="my-0 fw-normal">Enterprise</h4>
+							<h4 class="my-0 fw-normal">15 DAYS</h4>
 						</div>
 						<div class="card-body">
 							<h1 class="card-title pricing-card-title">
-								$29<small class="text-body-secondary fw-light">/mo</small>
+								￦18,000
 							</h1>
 							<ul class="list-unstyled mt-3 mb-4">
-								<li>30 users included</li>
-								<li>15 GB of storage</li>
-								<li>Phone and email support</li>
-								<li>Help center access</li>
+								<li>512명의 사용자들이 가입했어요</li>
+								<li>15일간 저렴한 가격으로 영상을 시청해봐요</li>
+								
 							</ul>
-							<button type="button" class="w-100 btn btn-lg btn-primary">Contact
-								us</button>
+							<button type="button" class="w-100 btn btn-lg btn-primary">Sign up
+								for membership</button>
 						</div>
 					</div>
 				</div>
 				<div class="col">
 					<div class="card mb-2 rounded-3 shadow-sm border-primary">
 						<div class="card-header py-3 text-bg-primary border-primary">
-							<h4 class="my-0 fw-normal">Enterprise</h4>
+							<h4 class="my-0 fw-normal">30 DAYS</h4>
 						</div>
 						<div class="card-body">
 							<h1 class="card-title pricing-card-title">
-								$29<small class="text-body-secondary fw-light">/mo</small>
+								￦22,000
 							</h1>
 							<ul class="list-unstyled mt-3 mb-4">
-								<li>30 users included</li>
-								<li>15 GB of storage</li>
-								<li>Phone and email support</li>
-								<li>Help center access</li>
+								<li>1024명의 사용자들이 가입했어요</li>
+								<li>한달간 저렴한 가격으로 영상을 시청해봐요</li>
+								
 							</ul>
-							<button type="button" class="w-100 btn btn-lg btn-primary">Contact
-								us</button>
+							<button type="button" class="w-100 btn btn-lg btn-primary">Sign up
+								for membership</button>
 						</div>
 					</div>
 				</div>
