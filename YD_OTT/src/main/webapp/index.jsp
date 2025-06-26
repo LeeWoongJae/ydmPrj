@@ -24,7 +24,7 @@ h3 , h2 {
 <h2>YEDAM OTT PROJECT</h2>
 <h3>4조</h3>
 <div class="aTagDiv">
-<button type="button" class="col-sm-2 btn btn-info" onclick="openNewWindow()" id="notionId">GOTO : NOTION</button>
+<button type="button" class="col-sm-2 btn btn-info" onclick="openNewWindow()" id="notionId">GO TO : NOTION</button>
 </div>
 <table class="table">
 <tr>
