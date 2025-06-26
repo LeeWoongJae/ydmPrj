@@ -13,7 +13,7 @@
   </definition>
 
   <!-- user -->
-  <definition name="user" template="/WEB-INF/layout/template.jsp">
+  <definition name="animation" template="/WEB-INF/layout/animationTemp.jsp">
     <put-attribute name="title" value="Tiles tutorial homepage" />
     <put-attribute name="header" value="/WEB-INF/layout/header.jsp" />
     <put-attribute name="menu" value="/WEB-INF/layout/menu.jsp" />
@@ -33,8 +33,8 @@
   
   
   <!-- add definition -->
-  <definition name="WILDCARD:user/*" extends="user" >
-    <put-attribute name="body" value="/WEB-INF/jsp/{1}.jsp" />
+  <definition name="WILDCARD:product/*" extends="animation" >
+    <put-attribute name="body" value="/WEB-INF/jsp/product/{1}.jsp" />
   </definition>
   
   
@@ -47,7 +47,7 @@
   </definition>
   
   <!-- 마지막. -->
-  <definition name="WILDCARD:*/*" extends="user" >
+  <definition name="WILDCARD:*/*" extends="animation" >
     <put-attribute name="body" value="/WEB-INF/jsp/{1}/{2}.jsp" />
   </definition>
   

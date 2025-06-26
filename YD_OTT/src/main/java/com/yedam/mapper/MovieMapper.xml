@@ -5,7 +5,15 @@
 <mapper namespace="com.yedam.mapper.MovieMapper">
 	<!-- 영화목록 -->
 	<select id="selectList" resultType="com.yedam.vo.MovieVO">
-		SELECT * 
-		FROM movie
+		select movie_id,
+		       genre_id,
+		       title,
+		       description,
+		       thumbnail,
+		       video_url,
+		       total_star,
+		       star_count,
+		       view_count from movie
 	</select>
+
 </mapper>

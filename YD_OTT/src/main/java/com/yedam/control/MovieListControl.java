@@ -1,17 +1,11 @@
 package com.yedam.control;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.yedam.common.Control;
 import com.yedam.service.MovieService;
 import com.yedam.service.MovieServiceImpl;
@@ -19,19 +13,20 @@ import com.yedam.vo.MovieVO;
 
 public class MovieListControl implements Control {
 
-	@Override
-	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		resp.setContentType("text/json;charset=utf-8");
+    @Override
+    public void exec(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
 
+        // 1. 서비스 호출
+        MovieService svc = new MovieServiceImpl();
+        List<MovieVO> list = svc.movieList();
+        System.out.println(list.size()); 
+        
+        // 2. request 범위에 세팅
+        req.setAttribute("list", list);
 
-		MovieService mvc = new MovieServiceImpl();
-		List<MovieVO> list = mvc.movieList();
-		System.out.println("list목록을 출력합니다 메세지");
-		req.setAttribute("list", list);
-		
-		req.getRequestDispatcher("product/movieList.tiles").forward(req, resp);
-
-	}
-
+        // 3. 같은 요청 안에서 Tiles-JSP로 forward
+        req.getRequestDispatcher("WEB-INF/jsp/product/productList.jsp")
+           .forward(req, resp);
+    }
 }

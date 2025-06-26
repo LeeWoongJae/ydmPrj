@@ -30,11 +30,11 @@
 
 <body>
     <!-- Page Preloder -->
-    <div id="preloder">
-        <div class="loader"></div>
-    </div>
+    
 
-   <!-- 헤더가 중복이라서 날림 -->
+    <!-- Header Section Begin -->
+   
+    <!-- Header End -->
 
     <!-- Normal Breadcrumb Begin -->
     <section class="normal-breadcrumb set-bg" data-setbg="${pageContext.request.contextPath}/img/normal-breadcrumb.jpg">
@@ -61,47 +61,76 @@
                         <form action="#">
                             <div class="input__item">
                                 <input type="text" placeholder="Your ID">
-                                <span class="icon_key"></span>
                             </div>
                             <div class="input__item">
                                 <input type="text" placeholder="Password">
                                 <span class="icon_lock"></span>
                             </div>
                             <div class="input__item">
+                                <input type="text" placeholder="Your Name">
+                                <span class="icon_lock"></span>
+                            </div>
+                            <div class="input__item">
                                 <input type="text" placeholder="Your Email">
-                                <span class="icon_mail"></span>
+                                <span class="icon_lock"></span>
                             </div>
                             <div class="input__item">
-                                <input type="text" placeholder="Phone">
-                                <span class="icon_phone"></span>
+                                <input type="text" placeholder="Your Phone">
+                                <span class="icon_lock"></span>
                             </div>
                             <div class="input__item">
-                                <input type="text" placeholder="Birth Date">
-                                <span class="icon_calendar"></span>
+                                <input type="text" placeholder="Your Birthdate">
+                                <span class="icon_lock"></span>
                             </div>
                             <button type="submit" class="site-btn">Login Now</button>
                         </form>
                         <h5>Already have an account? <a href="#">Log In!</a></h5>
                     </div>
+                    <div class="col-lg-6">
                 </div>
+                </div>
+                    <div class="login__social__links">
+                        <h3>Login With:</h3>
+                        <ul>
+                            <li><a href="#" class="facebook"><i class="fa fa-facebook"></i> Sign in With Facebook</a>
+                            </li>
+                            <li><a href="#" class="google"><i class="fa fa-google"></i> Sign in With Google</a></li>
+                            <li><a href="#" class="twitter"><i class="fa fa-twitter"></i> Sign in With Twitter</a></li>
+                        </ul>
+                        
+                    </div>
                
               
             </div>
         </div>
     </section>
     <!-- Signup Section End -->
-	<!-- footer가 겹쳐서 나오니까 이부분 삭제처리 함 -->
-   
 
-    <!-- Js Plugins -->
-    <script src="${pageContext.request.contextPath}/js/jquery-3.3.1.min.js"></script>
-    <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
-    <script src="${pageContext.request.contextPath}/js/player.js"></script>
-    <script src="${pageContext.request.contextPath}/js/jquery.nice-select.min.js"></script>
-    <script src="${pageContext.request.contextPath}/js/mixitup.min.js"></script>
-    <script src="${pageContext.request.contextPath}/js/jquery.slicknav.js"></script>
-    <script src="${pageContext.request.contextPath}/js/owl.carousel.min.js"></script>
-    <script src="${pageContext.request.contextPath}/js/main.js"></script>
+    <!-- Footer Section Begin -->
+    
+      <!-- Footer Section End -->
+
+      <!-- Search model Begin -->
+      <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch"><i class="icon_close"></i></div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search model end -->
+
+  <!-- Js Plugins -->
+<script src="${pageContext.request.contextPath}/js/jquery-3.3.1.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/player.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery.nice-select.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/mixitup.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery.slicknav.js"></script>
+<script src="${pageContext.request.contextPath}/js/owl.carousel.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/main.js"></script>
+
 
 
 <script>
