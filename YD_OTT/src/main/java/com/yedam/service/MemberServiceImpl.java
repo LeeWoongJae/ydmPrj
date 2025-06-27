@@ -9,7 +9,7 @@ import com.yedam.vo.MemberDTO;
 import com.yedam.vo.MemberVO;
 
 public class MemberServiceImpl implements MemberService {
-    SqlSession sqlSession = DataSource.getInstance().openSession(true); // ✅ autoCommit = true
+    SqlSession sqlSession = DataSource.getInstance().openSession(true); 
     MemberMapper mapper = sqlSession.getMapper(MemberMapper.class);
 
     @Override
@@ -29,6 +29,5 @@ public class MemberServiceImpl implements MemberService {
 
     @Override
     public int insertMember(MemberDTO member) {
-        return mapper.insertMember(member); // ✅ 이제 자동 commit됨
-    }
-}
+        return mapper.insertMember(member); 
+    }}
