@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yedam.mapper.MemberMapper">
+
+	<select id="login" parameterType="com.yedam.vo.MemberDTO" resultType="com.yedam.vo.MemberDTO">
+    SELECT 
+    member_id,password,name,email,phone,auth,TO_CHAR(join_date, 'yyyy-MM-dd') AS joinDate,birth_date 
+    FROM member 
+    WHERE member_id = #{memberId}
+    </select>
+
+  <!-- 로그인 확인 -->
+  <select id="loginCheck" parameterType="com.yedam.vo.MemberDTO" resultType="com.yedam.vo.MemberDTO">
+    SELECT 
+      member_id AS memberId,
+      password,
+      name,
+      email,
+      phone,
+      auth,
+      TO_CHAR(join_date, 'YYYY-MM-DD') AS joinDate,
+      birth_date AS birthDate
+    FROM member
+    WHERE member_id = #{memberId}
+      AND password = #{password}
+  </select>
+  
+    <!-- 회원가입 -->
+  <insert id="insertMember" parameterType="com.yedam.vo.MemberDTO">
+    INSERT INTO member (
+      member_id, password, name, email, phone, auth, join_date, birth_date
+    ) VALUES (
+      #{memberId}, #{password}, #{name}, #{email}, #{phone}, 'USER', SYSDATE, #{birthDate}
+    )
+  </insert>
+
+</mapper>
