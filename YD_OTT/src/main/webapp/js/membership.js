@@ -3,6 +3,7 @@
  */
 
 // 세션 아이디 정보 가져오기
+let logId = "${loginMember}";
 console.log("LOGIN ID : "+logId);
 // 구독할 맴버쉽 search
 let btn = document.querySelectorAll(".btn");

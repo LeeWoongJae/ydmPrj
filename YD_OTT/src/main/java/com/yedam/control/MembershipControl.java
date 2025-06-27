@@ -21,7 +21,7 @@ public class MembershipControl implements Control {
 //		HttpSession session = req.getSession();// 웹 브라우저 쿠키를 저장
 //		String memberId = session.getId();
 //		System.out.println("memberId:"+memberId);
-//		req.setAttribute("memberId" ,memberId);
+//		req.setAttribute("logId" ,memberId);
 		req.getRequestDispatcher("membership/membership.tiles").forward(req, resp);
 		
 	}

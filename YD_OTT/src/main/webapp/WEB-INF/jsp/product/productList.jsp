@@ -93,7 +93,8 @@
 	</div>
 </section>
 <script>
-console.log("${logId}");
+let logId = "${loginMember}";
+console.log("${loginMember}");
 console.log("현재 로그인 아이디 "+${logId});
 
 </script>

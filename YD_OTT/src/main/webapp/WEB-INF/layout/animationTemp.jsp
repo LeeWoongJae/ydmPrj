@@ -175,6 +175,7 @@
 <script src="${pageContext.request.contextPath}/js/jquery.slicknav.js"></script>
 <script src="${pageContext.request.contextPath}/js/owl.carousel.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/main.js"></script>
+<script src="${pageContext.request.contextPath}/js/membership.js"></script>
 <script>
 let logId = "${loginMember}";
 console.log("login_id:"+logId);
