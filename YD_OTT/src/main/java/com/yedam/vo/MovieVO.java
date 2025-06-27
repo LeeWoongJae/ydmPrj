@@ -13,4 +13,9 @@ public class MovieVO {
 	private int totalStar;
 	private int starCount;
 	private int viewCount;
+	private String titleSub;
+	private String genreName;
+	private String duration;
+	private double rating;
+	private String releaseDate;
 }

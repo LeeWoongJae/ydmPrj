@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -37,13 +37,14 @@
     <!-- Header End -->
 
     <!-- Breadcrumb Begin -->
+    <form action="productWatch.do">
     <div class="breadcrumb-option">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb__links">
-                        <a href="./index.html"><i class="fa fa-home"></i> Home</a>
-                        <a href="./categories.html">Categories</a>
+                        <a href="main.do"><i class="fa fa-home"></i> Home</a>
+                        <a href="#">Categories</a>
                         <a href="#">${mv.genreId == 1 ? '액션' :
     mv.genreId == 2 ? '코미디' :
     mv.genreId == 3 ? '공포'  :
@@ -66,7 +67,7 @@
                 <div class="col-lg-12">
                     <div class="anime__video__player">
                         <video id="player" playsinline controls data-poster="${pageContext.request.contextPath}/videos/${mv.thumbnail}">
-                            <source src="${pageContext.request.contextPath}/videos/${mv.movieId }" type="video/mp4" />
+                            <source src="${pageContext.request.contextPath}/videos/${mv.movieId}.mp4" type="video/mp4" />
                             <!-- Captions are optional -->
                             <track kind="captions" label="English captions" src="#" srclang="en" default />
                         </video>
@@ -76,6 +77,7 @@
             
         </div>
     </section>
+    </form>
     <!-- Anime Section End -->
 
     <!-- Footer Section Begin -->
@@ -102,6 +104,7 @@
 <script src="${pageContext.request.contextPath}/js/jquery.slicknav.js"></script>
 <script src="${pageContext.request.contextPath}/js/owl.carousel.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/main.js"></script>
+
 
 </body>
 

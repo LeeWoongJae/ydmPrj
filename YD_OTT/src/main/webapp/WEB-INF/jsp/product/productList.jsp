@@ -80,7 +80,13 @@
 					</div>
 					<div class="product__item__text">
 						<ul>
-							<li>Active</li>
+							<li>${mv.genreId == 1 ? '액션' :
+    mv.genreId == 2 ? '코미디' :
+    mv.genreId == 3 ? '공포'  :
+    mv.genreId == 4 ? 'SF'    :
+    mv.genreId == 5 ? '판타지':
+    mv.genreId == 6 ? '로맨스':
+    mv.genreId == 7 ? '스릴러' : '기타'} </li>
 							<li>Movie</li>
 						</ul>
 						<h5>
