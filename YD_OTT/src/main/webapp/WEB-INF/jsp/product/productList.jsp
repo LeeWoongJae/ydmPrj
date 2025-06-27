@@ -92,3 +92,7 @@
 		</c:forEach>
 	</div>
 </section>
+<script>
+console.log("현재 로그인 아이디 "+${logId});
+
+</script>

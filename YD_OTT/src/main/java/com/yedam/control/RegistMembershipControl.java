@@ -23,7 +23,7 @@ public class RegistMembershipControl implements Control {
 			req.getRequestDispatcher("membership/membership.tiles").forward(req, resp);
 		}
 		else if (req.getMethod().equals("POST")) {
-			String memberId = req.getParameter("logId");
+			String memberId = req.getParameter("memberId");
 			String mbsCode = req.getParameter("mbscode");
 			String cnt; 
 			if(mbsCode.equals("1")) {
@@ -54,9 +54,9 @@ public class RegistMembershipControl implements Control {
 				map.put("retCode", "Fail");
 			}
 			String json = gson.toJson(map);
-			System.out.println(json);
+			System.out.println("json : "+json);
 			resp.getWriter().print(json);
-			
+			req.getRequestDispatcher("member/movieList.tiles").forward(req, resp);
 			
 		}
 		
