@@ -32,8 +32,6 @@
   </definition>
   
   
-  
-  
   <!-- add definition -->
   <definition name="WILDCARD:product/*" extends="animation" >
     <put-attribute name="body" value="/WEB-INF/jsp/product/{1}.jsp" />
@@ -53,6 +51,8 @@
     <put-attribute name="body" value="/WEB-INF/jsp/{1}/{2}.jsp" />
   </definition>
   
+ 
+ 
   
   
   
