@@ -57,9 +57,16 @@
                                     </ul>
                                 </li>
                                 <li><a href="#">Contacts</a></li>
-                                <c:if test="${logId != null}">
-                                </c:if>
-                                <li><a href="${pageContext.request.contextPath}/membership.do">Membership</a></li>
+                                <c:choose>
+                                        <c:when test="${empty logId}">
+                                            <li><a href="${pageContext.request.contextPath}/signUp.do">Sign Up</a></li>
+                                            <li><a href="${pageContext.request.contextPath}/login.do">Login</a></li>
+                                        </c:when>
+                                        <c:otherwise>
+                                            <li><a href="${pageContext.request.contextPath}/logout.do">Logout</a></li>
+                                            <li><a href="${pageContext.request.contextPath}/membership.do">Membership</a></li>
+                                        </c:otherwise>
+                                    </c:choose>
                             </ul>
                         </nav>
                     </div>
@@ -149,6 +156,7 @@
 <script src="${pageContext.request.contextPath}/js/jquery.slicknav.js"></script>
 <script src="${pageContext.request.contextPath}/js/owl.carousel.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/main.js"></script>
+<script src="${pageContext.request.contextPath}/js/membership.js"></script>
 
 
 </body>
