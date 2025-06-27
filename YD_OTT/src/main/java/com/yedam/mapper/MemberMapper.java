@@ -17,6 +17,7 @@ public interface MemberMapper {
     public MemberDTO loginCheck(@Param("memberId")String memberId, @Param("password")String password);
     // 회원가입
     public int insertMember(MemberDTO member);
+	int updateMembership(String memberId);
 	
 	
 	

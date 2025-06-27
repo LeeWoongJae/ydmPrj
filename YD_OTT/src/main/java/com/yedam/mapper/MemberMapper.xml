@@ -36,5 +36,12 @@
       #{memberId}, #{password}, #{name}, #{email}, #{phone}, 'USER', SYSDATE, #{birthDate}
     )
   </insert>
+  <!-- 맴버십 가입시 가입상태 수정 -->
+  <update id="updateMembership" parameterType="string">
+  update member 
+  set is_membership = 'O' 
+  where member_id = #{memberId}
+  
+  </update>
 
 </mapper>

@@ -36,4 +36,15 @@ public class MemberServiceImpl implements MemberService {
 		return mapper.insertMember(member);
 	}
 
+	@Override
+	public int updateMembership(String memberId) {
+		// 맴버쉽 가입하면 가입했다고 상태를 변경
+		int r = mapper.updateMembership(memberId);
+		if(r==1) {
+			sqlSession.commit();
+			
+		}
+		return r; 
+	}
+
 }

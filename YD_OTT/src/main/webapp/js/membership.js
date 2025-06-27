@@ -2,21 +2,24 @@
  * membership.js 
  */
 
-// 세션 아이디 정보 가져오기
-let logId = "${loginMember}";
-console.log("LOGIN ID : "+logId);
+// 세션 아이디 정보 가져오기(확인)
+
+console.log("LOGIN ID : "+memberId);
 // 구독할 맴버쉽 search
 let btn = document.querySelectorAll(".btn");
 // 버튼들을 반복문 돌면서 
 btn.forEach(function(e){
 	e.addEventListener('click', function(ev){
+	// target 확인용 가격 정보 가져오기
 	console.log("선택한 맴버쉽 가격은 : "+ev.target.parentElement.querySelector('.mbsprice').innerText.substring(1));
+	// 들고가야할 맴버쉽 코드번호를 서치
 	let mbscode = ev.target.parentElement.querySelector('input[name="mbscode"]').value;
 	console.log("선택하신 맴버쉽 코드는 : "+mbscode);
-	
-	fetch('registMembership.do?memberId='+logId+'&planNo='+mbscode)
+	console.log("가입하실 맴버 코드는 : "+memberId);
+	fetch('registmembership.do?memberId='+memberId+'&planNo='+mbscode)
 	.then(data => data.json())
 	.then(result=>{
+		console.log(result);
 	let resVal = result.retVal;
 	console.log("resultVal"+resVal);
 		if(result.retCode=='Success'){
@@ -24,9 +27,10 @@ btn.forEach(function(e){
 		}
 		else {
 			alert("맴버쉽 구독이 실패되었습니다.");
+			return;
 		}
 	})
-	.catch(err=>console.log(err));
+	.catch(err=>console.error(err));
 	
 	
 });
