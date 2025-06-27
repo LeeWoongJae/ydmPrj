@@ -55,15 +55,15 @@
                 <div class="col-lg-6">
                     <div class="login__form">
                         <h3>Login</h3>
-                        <form action="#">
+                        <form action="login.do" method="post">
                             <div class="input__item">
-                                <input type="text" placeholder="Email address">
-                                <span class="icon_mail"></span>
-                            </div>
-                            <div class="input__item">
-                                <input type="text" placeholder="Password">
-                                <span class="icon_lock"></span>
-                            </div>
+								<input type="text" name="memberId" placeholder="아이디"> <span
+									class="icon_id"></span>
+							</div>
+							<div class="input__item">
+								<input type="password" name="password" placeholder="비밀번호">
+								<span class="icon_lock"></span>
+							</div>
                             <button type="submit" class="site-btn">Login Now</button>
                         </form>
                         <a href="#" class="forget_pass">Forgot Your Password?</a>
@@ -72,7 +72,7 @@
                 <div class="col-lg-6">
                     <div class="login__register">
                         <h3>Dont’t Have An Account?</h3>
-                        <a href="signUp.tiles" class="primary-btn">Register Now</a>
+                        <a href="signUp.do" class="primary-btn">Register Now</a>
                     </div>
                 </div>
             </div>

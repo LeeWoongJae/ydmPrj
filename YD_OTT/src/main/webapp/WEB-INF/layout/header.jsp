@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                 
             <div class="row">
                 <div class="col-lg-2">
@@ -27,6 +27,9 @@
                                 </li>
                                 <li><a href="./blog.html">Our Blog</a></li>
                                 <li><a href="#">Contacts</a></li>
+                                <c:if test="${logId !=null }">                                
+                                </c:if>
+                                <li><a href="${pageContext.request.contextPath}/membership/membership.tiles">Membership</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -34,6 +37,7 @@
                 <div class="col-lg-2">
                     <div class="header__right">
                         <a href="#" class="search-switch"><span class="icon_search"></span></a>
+                        <a href="./login.html"><span class="icon_archive_alt"></span></a>
                         <a href="./login.html"><span class="icon_profile"></span></a>
                     </div>
                 </div>
