@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yedam.mapper.MembershipMapper">
+<insert id="registMembership" statementType="CALLABLE">
+<!-- BEGIN ... END 로 동시 처리 -->
+BEGIN
+insert into subscription (member_id , plan_no , start_date , left_date) 
+values(#{id} , #{pno}, SYSDATE, SYSDATE+TO_NUMBER(#{lfdate}) );
+
+update member 
+set is_membership = 'O'
+where member_id = #{id};
+
+END;
+
+</insert>
+</mapper>

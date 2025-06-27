@@ -14,6 +14,7 @@ import com.yedam.control.AddRevuControl;
 import com.yedam.control.AddWatchProdControl;
 import com.yedam.control.AddWishControl;
 import com.yedam.control.LoginControl;
+import com.yedam.control.LoginFormControl;
 import com.yedam.control.LogoutControl;
 import com.yedam.control.MainControl;
 import com.yedam.control.MemberInfoControl;
@@ -48,12 +49,13 @@ public class FrontController extends HttpServlet{
 		
 		// member page
 		map.put("/memberInfo.do", new MemberInfoControl()); // 회원정보 - 마이페이지
-		map.put("/registMember.do", new RegistMemberControl()); // 회원 가입
+		map.put("/signUp.do", new RegistMemberControl()); // 회원 가입
 		map.put("/removeMember.do", new RemoveMemberControl()); // 회원 탈퇴
 		map.put("/login.do", new LoginControl()); // 로그인
 		map.put("/logout.do", new LogoutControl()); // 로그아웃)
-		
-		
+		map.put("/loginForm.do", new LoginFormControl()); // 로그인폼
+		map.put("/registmember.do", new RegistMemberControl()); // 🔥 
+
 		
 		
 		
@@ -95,7 +97,7 @@ public class FrontController extends HttpServlet{
 		// watch ott list page
 		map.put("/watchList.do", new WatchListControl()); // 시청기록 리스트
 		map.put("/addWatchProd.do", new AddWatchProdControl()); // 시청기록 추가
-		map.put("playProd.do", new PlayProdControl()); // 재생
+		map.put("/playProd.do", new PlayProdControl()); // 재생
 		
 		
 		

@@ -21,31 +21,31 @@ public class LogFilter implements Filter{
 	public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain)
 			throws IOException, ServletException {
 		
-		System.out.println("Servlet 실행전");
-
-		String host = req.getRemoteAddr();
-		String port = ""+req.getRemotePort();
-		
-		//System.out.println("접속 Host : "+host+" 접속 Port : "+port);
-		
-		
+//		System.out.println("Servlet 실행전");
+//
+//		String host = req.getRemoteAddr();
+//		String port = ""+req.getRemotePort();
+//		
+//		//System.out.println("접속 Host : "+host+" 접속 Port : "+port);
+//		
+//		
 		HttpServletRequest request = (HttpServletRequest)req;
 		String uri = request.getRequestURI();
 		String context = request.getContextPath();
 		String page = uri.substring(context.length());
-
-		// access control
+//
+//		// access control
 		// if(list.indexOf(host) != -1)
 		// {System.out.println("IP:"+host+", PAGE : "+page);}
-		if(host.equals("192.168.0.17")) {
-			System.out.println("IP:"+host+", PAGE : "+page);
-			return;
-		}
+//		if(host.equals("192.168.0.17")) {
+//			System.out.println("IP:"+host+", PAGE : "+page);
+//			return;
+//		}
 		chain.doFilter(req, resp);
-		
-		
-		
-		System.out.println("Servlet 실행후");
+//		
+//		
+//		
+//		System.out.println("Servlet 실행후");
 		
 	}
 

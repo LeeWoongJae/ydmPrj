@@ -21,6 +21,7 @@ public class MainControl implements Control {
 		List<MovieVO> list = svc.movieList();
 		System.out.println(list.size());
 
+
 		// 2. request 범위에 세팅
 		req.setAttribute("list", list);
 		req.getRequestDispatcher("product/productList.tiles").forward(req, resp);
