@@ -44,8 +44,14 @@
                     <div class="breadcrumb__links">
                         <a href="./index.html"><i class="fa fa-home"></i> Home</a>
                         <a href="./categories.html">Categories</a>
-                        <a href="#">Romance</a>
-                        <span>Fate Stay Night: Unlimited Blade</span>
+                        <a href="#">${mv.genreId == 1 ? '액션' :
+    mv.genreId == 2 ? '코미디' :
+    mv.genreId == 3 ? '공포'  :
+    mv.genreId == 4 ? 'SF'    :
+    mv.genreId == 5 ? '판타지':
+    mv.genreId == 6 ? '로맨스':
+    mv.genreId == 7 ? '스릴러' : '기타'} </a>
+                        <span>${mv.title}</span>
                     </div>
                 </div>
             </div>
@@ -59,8 +65,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="anime__video__player">
-                        <video id="player" playsinline controls data-poster="./videos/anime-watch.jpg">
-                            <source src="videos/1.mp4" type="video/mp4" />
+                        <video id="player" playsinline controls data-poster="${pageContext.request.contextPath}/videos/${mv.thumbnail}">
+                            <source src="${pageContext.request.contextPath}/videos/${mv.movieId }" type="video/mp4" />
                             <!-- Captions are optional -->
                             <track kind="captions" label="English captions" src="#" srclang="en" default />
                         </video>

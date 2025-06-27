@@ -42,7 +42,13 @@
                     <div class="breadcrumb__links">
                         <a href="./index.html"><i class="fa fa-home"></i> Home</a>
                         <a href="./categories.html">Categories</a>
-                        <span>Romance</span>
+                        <span>${mv.genreId == 1 ? '액션' :
+    mv.genreId == 2 ? '코미디' :
+    mv.genreId == 3 ? '공포'  :
+    mv.genreId == 4 ? 'SF'    :
+    mv.genreId == 5 ? '판타지':
+    mv.genreId == 6 ? '로맨스':
+    mv.genreId == 7 ? '스릴러' : '기타'} </span>
                     </div>
                 </div>
             </div>
@@ -57,16 +63,15 @@
             <div class="anime__details__content">
                 <div class="row">
                     <div class="col-lg-3">
-                        <div class="anime__details__pic set-bg" data-setbg="${pageContext.request.contextPath}/img/anime/details-pic1.jpg">
+                        <div class="anime__details__pic set-bg" data-setbg="${pageContext.request.contextPath}/img/anime/${mv.thumbnail}">
                             <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                            <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                            <div class="view"><i class="fa fa-eye"></i> ${mv.viewCount}</div>
                         </div>
                     </div>
                     <div class="col-lg-9">
                         <div class="anime__details__text">
                             <div class="anime__details__title">
                                 <h3>${mv.title }</h3>
-                                <span>フェイト／ステイナイト, Feito／sutei naito</span>
                             </div>
                             <div class="anime__details__rating">
                                 <div class="rating">
@@ -78,15 +83,12 @@
                                 </div>
                                 <span>1.029 Votes</span>
                             </div>
-                            <p>Every human inhabiting the world of Alcia is branded by a “Count” or a number written on
-                                their body. For Hina’s mother, her total drops to 0 and she’s pulled into the Abyss,
-                                never to be seen again. But her mother’s last words send Hina on a quest to find a
-                            legendary hero from the Waste War - the fabled Ace!</p>
+                            <p>${mv.description }</p>
                             <div class="anime__details__widget">
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6">
                                         <ul>
-                                            <li><span>Type:</span> TV Series</li>
+                                            <li><span>Type:</span> Movie</li>
                                             <li><span>Studios:</span> Lerche</li>
                                             <li><span>Date aired:</span> Oct 02, 2019 to ?</li>
                                             <li><span>Status:</span> Airing</li>
