@@ -21,6 +21,7 @@ import com.yedam.control.MemberInfoControl;
 import com.yedam.control.MembershipControl;
 import com.yedam.control.PlayProdControl;
 import com.yedam.control.MovieListControl;
+import com.yedam.control.NavigationControl;
 import com.yedam.control.PaymentControl;
 import com.yedam.control.RegistMemberControl;
 import com.yedam.control.RegistMembershipControl;
@@ -118,7 +119,8 @@ public class FrontController extends HttpServlet{
 		
 		
 		
-		
+		// navigation
+		map.put("/navigation.do", new NavigationControl());
 		
 		
 		

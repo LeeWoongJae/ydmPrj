@@ -17,4 +17,20 @@ WHERE member_id = #{memberId}
 
 <!-- 구독리스트에서 내역 삭제 -->
 </delete>
+
+<select id="selectMembership" parameterType="string" resultType="memberDTO">
+SELECT member_id, plan_no 
+FROM subscription 
+<choose>
+<when test="member_id != null">
+WHERE member_id = #{memberId}
+</when>
+</choose>
+
+
+<!-- 초기 로그인시 메인화면에서 멤버쉽 가입이 되어져있으면 멤버쉽 메뉴 옆에 구독정보뜨기 -->
+</select>
+
+
+
 </mapper>

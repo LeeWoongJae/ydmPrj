@@ -7,5 +7,5 @@ public interface MembershipMapper {
 	public int registMembership(SubScriptionVO ssp);
 
 	public int removeMembership(String memberId);
-	
+	public SubScriptionVO selectMembership(String memberId);
 }

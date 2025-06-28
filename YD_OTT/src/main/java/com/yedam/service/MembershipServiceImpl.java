@@ -23,6 +23,11 @@ public class MembershipServiceImpl implements MembershipService {
 		if(r == 1) {sqlSession.commit();}
 		return r;
 	}
+	@Override
+	public SubScriptionVO selectMembership(String memberId) {
+		// TODO Auto-generated method stub
+		return mapper.selectMembership(memberId);
+	}
 
 
 }
