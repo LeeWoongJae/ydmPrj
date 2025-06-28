@@ -43,5 +43,18 @@
   where member_id = #{memberId}
   
   </update>
+  <!-- 맴버십이 이미 가입되어있는지 -->
+  <select id="membershipTrueChk" parameterType="string" resultType="com.yedam.vo.MemberDTO">
+  SELECT member_id, is_membership 
+  FROM member 
+  WHERE member_id = #{memberId} 
+  
+  </select>
+  <update id="ResetMembership" parameterType="string">
+  update member 
+  set is_membership = 'X' 
+  where member_id = #{memberId}
+  <!-- 이미 가입되여져 있다면 구독 취소할떄 상태도 X로 수정 -->
+  </update>
 
 </mapper>

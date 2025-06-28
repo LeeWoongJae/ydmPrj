@@ -10,6 +10,7 @@
   <typeAliases>
   <!-- <typeAlias alias="Board" type="com.yedam.vo.BoardVO"/> -->
 	<typeAlias alias="subScript" type="com.yedam.vo.SubScriptionVO" />
+	<typeAlias alias="memberDTO" type="com.yedam.vo.MemberDTO"/>
   </typeAliases>
   <environments default="development">
     <environment id="development">

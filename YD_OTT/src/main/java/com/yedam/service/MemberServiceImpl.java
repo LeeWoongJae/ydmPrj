@@ -47,4 +47,21 @@ public class MemberServiceImpl implements MemberService {
 		return r; 
 	}
 
+	@Override
+	public MemberDTO membershipChk(String memberId) {
+		
+		return mapper.membershipTrueChk(memberId);
+	}
+
+	@Override
+	public int ResetMembership(String memberId) {
+		// TODO Auto-generated method stub
+		// 맴버쉽 가입 상태 초기화
+		int r = mapper.ResetMembership(memberId);
+		if(r==1) {
+			sqlSession.commit();
+		}
+		return r;
+	}
+
 }

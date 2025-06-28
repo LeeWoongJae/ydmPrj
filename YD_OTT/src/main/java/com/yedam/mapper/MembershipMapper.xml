@@ -10,4 +10,11 @@ insert into subscription (member_id, plan_no, start_date, left_date)
 values(#{memberId}, #{planNo}, SYSDATE, #{leftDate} )
 
 </insert>
+
+<delete id="removeMembership" parameterType="string">
+DELETE FROM subscription
+WHERE member_id = #{memberId}
+
+<!-- 구독리스트에서 내역 삭제 -->
+</delete>
 </mapper>

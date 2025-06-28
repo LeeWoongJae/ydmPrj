@@ -17,6 +17,12 @@ public class MembershipServiceImpl implements MembershipService {
 		}
 		return r; 
 	}
+	@Override
+	public int removeMembership(String memberId) {
+		int r = mapper.removeMembership(memberId);
+		if(r == 1) {sqlSession.commit();}
+		return r;
+	}
 
 
 }

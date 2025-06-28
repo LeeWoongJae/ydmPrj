@@ -15,6 +15,7 @@ import com.yedam.service.MemberService;
 import com.yedam.service.MemberServiceImpl;
 import com.yedam.service.MembershipService;
 import com.yedam.service.MembershipServiceImpl;
+import com.yedam.vo.MemberDTO;
 import com.yedam.vo.SubScriptionVO;
 
 public class RegistMembershipControl implements Control {
@@ -49,24 +50,30 @@ public class RegistMembershipControl implements Control {
 						Map<String , Object> map = new HashMap<>();
 						MemberService msv = new MemberServiceImpl(); // member의 맴버쉽 상태를 변경
 						MembershipService svc = new MembershipServiceImpl(); // 맴버쉽 가입 추가
-//						if(!msv.membershipChk(memberId)) {
-//							
-//						}
-						if(svc.registMembership(ssp)==1) {
-							if(msv.updateMembership(memberId)==1) {
-								System.out.println("Update completed membership state !");
-							}else if(msv.updateMembership(memberId)!=1) {
-								System.out.println("Update failed membership state !");
+						MemberDTO member = msv.membershipChk(memberId); // 맴버쉽 가입 여부 확인(member_id , is_membership 정보 저장)
+						if(member != null & member.getIsMembership().equals("X")) { // is_membership == 'X' 라면
+							if(svc.registMembership(ssp)==1) {
+								if(msv.updateMembership(memberId)==1) {
+									System.out.println("Update completed membership state !");
+								}else if(msv.updateMembership(memberId)!=1) {
+									System.out.println("Update failed membership state !");
+								}
+								map.put("retVal", ssp);
+								map.put("retCode", "Success");
+							}else {
+								map.put("retCode", "Fail");
 							}
+							// 결과 상태를 json객체로 생성
+							String json = gson.toJson(map);
+							System.out.println("json : "+json);
+							resp.getWriter().print(json);
+						}else if(member == null || member.getIsMembership().equals("O")){
 							map.put("retVal", ssp);
-							map.put("retCode", "Success");
-						}else {
 							map.put("retCode", "Fail");
+							String json = gson.toJson(map);
+							System.out.println(json);
+							resp.getWriter().print(json);
 						}
-						// 결과 상태를 json객체로 생성
-						String json = gson.toJson(map);
-						System.out.println("json : "+json);
-						resp.getWriter().print(json);
 						//req.getRequestDispatcher("/main.do").forward(req, resp);
 
 	}

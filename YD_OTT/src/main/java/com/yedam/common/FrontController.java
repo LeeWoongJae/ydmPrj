@@ -21,6 +21,7 @@ import com.yedam.control.MemberInfoControl;
 import com.yedam.control.MembershipControl;
 import com.yedam.control.PlayProdControl;
 import com.yedam.control.MovieListControl;
+import com.yedam.control.PaymentControl;
 import com.yedam.control.RegistMemberControl;
 import com.yedam.control.RegistMembershipControl;
 import com.yedam.control.RemoveMemberControl;
@@ -85,7 +86,7 @@ public class FrontController extends HttpServlet{
 		map.put("/membership.do", new MembershipControl()); // 맴버쉽 리스트()
 		map.put("/registmembership.do", new RegistMembershipControl()); // 맴버쉽 가입(가입한 플랜정보를 가지고 감)
 		map.put("/removemembership.do", new RemoveMembershipControl()); // 맴버쉽 탈퇴
-		
+		map.put("/payment.do",new PaymentControl());// 결제창 API 띄우기
 		
 		
 		
