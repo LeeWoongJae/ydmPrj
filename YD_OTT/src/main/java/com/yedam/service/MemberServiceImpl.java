@@ -9,32 +9,23 @@ import com.yedam.vo.MemberDTO;
 import com.yedam.vo.MemberVO;
 
 public class MemberServiceImpl implements MemberService {
-	SqlSession sqlSession = DataSource.getInstance().openSession();
-	MemberMapper mapper = sqlSession.getMapper(MemberMapper.class);
-	
-	@Override
-	public List<MemberVO> memberList() {
-		// 
-		return mapper.memberList();
-	}
+    SqlSession sqlSession = DataSource.getInstance().openSession(true); 
+    MemberMapper mapper = sqlSession.getMapper(MemberMapper.class);
 
-	@Override
-	public MemberDTO login(String memberId) {
-		
-		return mapper.login(memberId);
-	}
+    @Override
+    public List<MemberVO> memberList() {
+        return mapper.memberList();
+    }
 
-	@Override
-	public MemberDTO loginCheck(String memberId, String password) {
-		// TODO Auto-generated method stub
-		return mapper.loginCheck(memberId, password);
-	}
+    @Override
+    public MemberDTO login(String memberId) {
+        return mapper.login(memberId);
+    }
 
-	@Override
-	public int insertMember(MemberDTO member) {
-		// TODO Auto-generated method stub
-		return mapper.insertMember(member);
-	}
+    @Override
+    public MemberDTO loginCheck(String memberId, String password) {
+        return mapper.loginCheck(memberId, password);
+    }
 
 	@Override
 	public int updateMembership(String memberId) {
@@ -64,4 +55,10 @@ public class MemberServiceImpl implements MemberService {
 		return r;
 	}
 
+
+    @Override
+    public int insertMember(MemberDTO member) {
+        return mapper.insertMember(member); 
+    }
 }
+

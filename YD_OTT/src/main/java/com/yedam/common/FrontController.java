@@ -10,28 +10,29 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.yedam.control.AddRevuControl;
+import com.yedam.control.AddReviewControl;
 import com.yedam.control.AddWatchProdControl;
 import com.yedam.control.AddWishControl;
+import com.yedam.control.DeleteReviewControl;
 import com.yedam.control.LoginControl;
 import com.yedam.control.LoginFormControl;
 import com.yedam.control.LogoutControl;
 import com.yedam.control.MainControl;
 import com.yedam.control.MemberInfoControl;
 import com.yedam.control.MembershipControl;
-import com.yedam.control.PlayProdControl;
 import com.yedam.control.MovieListControl;
 import com.yedam.control.NavigationControl;
 import com.yedam.control.PaymentControl;
+import com.yedam.control.PlayProdControl;
 import com.yedam.control.RegistMemberControl;
 import com.yedam.control.RegistMembershipControl;
 import com.yedam.control.RemoveMemberControl;
 import com.yedam.control.RemoveMembershipControl;
-import com.yedam.control.RemoveRevuControl;
 import com.yedam.control.RemoveWishControl;
 import com.yedam.control.SelectDetailControl;
 import com.yedam.control.SelectProdControl;
 import com.yedam.control.SelectRevuListControl;
+import com.yedam.control.UpdateReviewControl;
 import com.yedam.control.WatchListControl;
 import com.yedam.control.WishListControl;
 
@@ -56,7 +57,8 @@ public class FrontController extends HttpServlet{
 		map.put("/login.do", new LoginControl()); // 로그인
 		map.put("/logout.do", new LogoutControl()); // 로그아웃)
 		map.put("/loginForm.do", new LoginFormControl()); // 로그인폼
-		
+		map.put("/registmember.do", new RegistMemberControl()); // 🔥 
+
 		
 		
 		
@@ -109,12 +111,12 @@ public class FrontController extends HttpServlet{
 		
 		
 		
-		// revu page
+		// review page
 		map.put("/selectRevuList.do", new SelectRevuListControl());
-		map.put("/addRevu.do", new AddRevuControl());
-		map.put("/removeRevu.do", new RemoveRevuControl());
-		
-		
+		map.put("/ajaxAddReview.do", new AddReviewControl());
+		map.put("/ajaxDeleteReview.do", new DeleteReviewControl());
+		map.put("/ajaxUpdateReview.do", new UpdateReviewControl());
+
 		
 		
 		

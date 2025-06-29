@@ -18,16 +18,22 @@
 	
 	<!-- 상세검색 -->
 	<select id="selectMovie" resultType="com.yedam.vo.MovieVO">
-		select movie_id,
-		       genre_id,
-		       title,
-		       description,
-		       thumbnail,
-		       video_url,
-		       total_star,
-		       star_count,
-		       view_count from movie
-		       where movie_id = #{movieId}
-	</select>
+    SELECT m.movie_id,
+           m.genre_id,
+           m.title,
+           m.title_sub,
+           m.description,
+           m.thumbnail,
+           m.video_url,
+           m.total_star,
+           m.star_count,
+           m.view_count,
+           m.duration,
+           TO_CHAR(m.release_date, 'YYYY-MM-DD') AS releaseDate,
+           g.genre_name AS genreName
+    FROM movie m
+    JOIN genre g ON m.genre_id = g.genre_id
+    WHERE m.movie_id = #{movieId}
+</select>
 
 </mapper>

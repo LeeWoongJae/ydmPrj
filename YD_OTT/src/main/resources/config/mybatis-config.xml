@@ -46,8 +46,8 @@
     
     
     
-    
-    
+    <!-- 리뷰 매퍼 -->
+        <mapper resource="com/yedam/mapper/ReviewMapper.xml"/>
     
     
     

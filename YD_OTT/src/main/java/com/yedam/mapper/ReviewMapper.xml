@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yedam.mapper.ReviewMapper">
+  
+    <insert id="insertReview" parameterType="com.yedam.vo.ReviewVO">
+    INSERT INTO review (review_id, member_id, movie_id, genre_id, content, star, reg_date)
+    VALUES (review_seq.nextval, #{memberId}, #{movieId}, #{genreId}, #{content}, #{star}, sysdate)
+</insert>
+
+
+    <select id="reviewList" resultType="com.yedam.vo.ReviewVO">
+        SELECT * FROM review WHERE movie_id = #{movieId} ORDER BY review_id DESC
+    </select>
+
+    <delete id="deleteReview">
+        DELETE FROM review WHERE review_id = #{reviewId} AND member_id = #{memberId}
+    </delete>
+
+    <update id="updateReview">
+        UPDATE review
+        SET content = #{content}, star = #{star}, reg_date = sysdate
+        WHERE review_id = #{reviewId} AND member_id = #{memberId}
+    </update>
+    
+    <update id="updateMovieStar" parameterType="map">
+  UPDATE movie
+  SET 
+    total_star = NVL(total_star, 0) + #{star},
+    star_count = NVL(star_count, 0) + 1
+  WHERE movie_id = #{movieId}
+</update>
+    
+
+</mapper>
