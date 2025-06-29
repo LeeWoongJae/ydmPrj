@@ -57,7 +57,7 @@
                                         <li><a href="${pageContext.request.contextPath}/navigation.do">Navigation</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Contacts</a></li>
+                                <li><a href="${pageContext.request.contextPath}/index.jsp">Contacts</a></li>
                                 <c:if test="${logId != null}">
                                 </c:if>
                                 <c:choose>

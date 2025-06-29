@@ -75,6 +75,7 @@ public class RegistMembershipControl implements Control {
 							resp.getWriter().print(json);
 						}
 						//req.getRequestDispatcher("/main.do").forward(req, resp);
+						//resp.sendRedirect("main.do");
 
 	}
 
