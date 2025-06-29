@@ -58,7 +58,7 @@
                 <div class="col-lg-6">
                     <div class="login__form">
                         <h3>Sign Up</h3>
-                        <form action="registmembership.do" method="post">
+                        <form action="signUp.do" method="post">
                             <div class="input__item">
                                 <input type="text" name="memberId" placeholder="Your ID">
                                 <span class="icon_profile"></span>
@@ -145,43 +145,16 @@ document.forms.signForm.addEventListener('submit',function(e){
 	this.submit();
 });
 
-document.querySelector('input[name="userId"]').addEventListener('change',function(e){
-console.log(this);
-let user = e.target.value;
-console.log("user:"+user);
-	// fetch로 넘겨받을 파라메터를 지정하여서 java단 서버에서 값을 처리하고 데이터를 리턴
-	fetch('checkId.do?id='+user)
-	.then(memberData=>memberData.json())
-	.then(result=>{
-		console.log(result);
-		if(result.retCode=='Exist'){
-			alert("존재하는 아이디");
-		}else{
-			alert("사용가능 아이디");
-		}
-	})
-	.catch(err=>console.log(err));
-	// 비밀번호까지 중복여부 해보기
-	document.querySelector('input[name="userPw"]').addEventListener('change',function(ev){
-		console.log(this);
-		let password = ev.target.value;
-		console.log("pw:"+password+" id : "+user);
-			// fetch로 넘겨받을 파라메터를 지정하여서 java단 서버에서 값을 처리하고 데이터를 리턴
-			fetch('checkId.do?id='+user)
-			.then(memberData=>memberData.json())
-			.then(result=>{
-				console.log(result.password);
-				if(result.retCode=='Exist'){
-					alert("사용불가 password");
-				}else{
-					alert("사용가능 password");
-				}
-			})
-			.catch(err=>console.log(err))
-			
-		});
-	
-});
+
+
+
+
+
+
+
+
+
+
 
 
 
