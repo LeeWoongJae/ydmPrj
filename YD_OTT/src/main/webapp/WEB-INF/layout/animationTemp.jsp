@@ -68,7 +68,8 @@
                                         
                                         <c:otherwise>
                                             <li><a href="${pageContext.request.contextPath}/logout.do">Logout</a></li>
-                                			<li><a href="${pageContext.request.contextPath}/membership.do">Membership(${mbsName})</a></li>
+                                			<li><a href="${pageContext.request.contextPath}/membership.do">Membership
+                                			<c:if test="${mbsName != null}">(${mbsName})</c:if></a></li>
                                         </c:otherwise>
                                     </c:choose>
                                
