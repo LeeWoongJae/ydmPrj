@@ -24,4 +24,11 @@ public class MovieServiceImpl implements MovieService {
 		return mapper.selectMovie(movieId);
 	}
 
+	@Override
+	public List<MovieVO> getKeyword(String title) {
+		// TODO Auto-generated method stub
+		
+		return mapper.getMovie(title);
+	}
+
 }

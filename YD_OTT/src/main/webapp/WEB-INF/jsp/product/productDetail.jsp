@@ -59,7 +59,13 @@
                 <div class="row">
                   <div class="col-lg-6">
                     <ul>
-                      <li><span>Genre:</span> ${mv.genreName}</li>
+                      <li><span>Genre:</span> ${mv.genreId == 1 ? '액션' :
+    mv.genreId == 2 ? '코미디' :
+    mv.genreId == 3 ? '공포'  :
+    mv.genreId == 4 ? 'SF'    :
+    mv.genreId == 5 ? '판타지':
+    mv.genreId == 6 ? '로맨스':
+    mv.genreId == 7 ? '스릴러' : '기타'} </li>
                       <li><span>Duration:</span> ${mv.duration}</li>
                       <li><span>Rating:</span> <c:out value="${avgStar}" default="0.0"/></li>
                       <li><span>Release:</span> ${mv.releaseDate}</li>
@@ -75,7 +81,7 @@
                 </div>
               </div>
               <div class="anime__details__btn">
-                <a href="addWish.do?movieId=${mv.movieId}" class="follow-btn">
+                <a href="#" class="follow-btn">
                   <i class="fa fa-heart-o"></i> 찜 하기
                 </a>
                 <a href="${pageContext.request.contextPath}/productWatch.do?movieId=${mv.movieId}" class="watch-btn">
