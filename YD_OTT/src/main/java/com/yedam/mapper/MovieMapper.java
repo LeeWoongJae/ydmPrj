@@ -7,4 +7,5 @@ import com.yedam.vo.MovieVO;
 public interface MovieMapper {
 	public List<MovieVO> selectList();
 	public MovieVO selectMovie(int mid);
+	public MovieVO getMovie(String keyword);
 }

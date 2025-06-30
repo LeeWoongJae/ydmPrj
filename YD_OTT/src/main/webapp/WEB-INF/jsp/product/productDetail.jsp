@@ -59,13 +59,14 @@
                 <div class="row">
                   <div class="col-lg-6">
                     <ul>
-                      <li><span>Genre:</span>${mv.genreId == 1 ? '액션' :
+
+                      <li><span>Genre:</span> ${mv.genreId == 1 ? '액션' :
     mv.genreId == 2 ? '코미디' :
     mv.genreId == 3 ? '공포'  :
     mv.genreId == 4 ? 'SF'    :
     mv.genreId == 5 ? '판타지':
     mv.genreId == 6 ? '로맨스':
-    mv.genreId == 7 ? '스릴러' : '기타'}</li>
+    mv.genreId == 7 ? '스릴러' : '기타'} </li>
                       <li><span>Duration:</span> ${mv.duration}</li>
                       <li><span>Rating:</span> <c:out value="${avgStar}" default="0.0"/></li>
                       <li><span>Release:</span> ${mv.releaseDate}</li>
@@ -81,7 +82,7 @@
                 </div>
               </div>
               <div class="anime__details__btn">
-                <a href="addWish.do?movieId=${mv.movieId}" class="follow-btn">
+                <a href="#" class="follow-btn">
                   <i class="fa fa-heart-o"></i> 찜 하기
                 </a>
                 <a href="${pageContext.request.contextPath}/productWatch.do?movieId=${mv.movieId}" class="watch-btn">
@@ -106,7 +107,7 @@
                     <h6>${rev.memberId} - <span>${rev.regDate}</span></h6>
                     <p>${rev.content}</p>
                     <p>⭐ ${rev.star}점</p>
-                    <c:if test="${rev.memberId == sessionScope.logId}">
+                    <c:if test="${rev.memberId == sessionScope.logId or logId eq 'admin'}">
                       <button class="btn btn-warning btn-sm edit-btn"
                         data-id="${rev.reviewId}" data-content="${rev.content}" data-star="${rev.star}">
                         수정
@@ -178,7 +179,7 @@
       const reviewId = $(this).data('id');
       $.post('ajaxDeleteReview.do', {
         reviewId: reviewId,
-        memberId: '${sessionScope.logId}'
+        memberId: "${sessionScope.logId}"
       }, function(res) {
         alert("삭제되었습니다.");
         location.reload();

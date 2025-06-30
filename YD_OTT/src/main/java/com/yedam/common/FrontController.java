@@ -30,6 +30,7 @@ import com.yedam.control.RegistMembershipControl;
 import com.yedam.control.RemoveMemberControl;
 import com.yedam.control.RemoveMembershipControl;
 import com.yedam.control.RemoveWishControl;
+import com.yedam.control.SearchMovieControl;
 import com.yedam.control.SelectDetailControl;
 import com.yedam.control.SelectProdControl;
 import com.yedam.control.SelectRevuListControl;
@@ -68,7 +69,7 @@ public class FrontController extends HttpServlet{
 		map.put("/movieList.do", new MovieListControl()); // OTT 리스트
 		map.put("/selectProd.do", new SelectProdControl()); // OTT 단일 검색
 		map.put("/selectDetail.do", new SelectDetailControl()); // OTT 상세보기
-		
+		map.put("/searchMovie.do", new SearchMovieControl()); // 검색
 		
 		
 		

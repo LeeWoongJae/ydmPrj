@@ -13,7 +13,7 @@
 							<div class="label">액션</div>
 							<h2>명량</h2>
 							<p>12척의 조선 vs 330척의 왜군 역사를 바꾼 위대한 전쟁이 시작된다!</p>
-							<a href="#"><span>지금 시청하기</span> <i class="fa fa-angle-right"></i></a>
+							<a href="${pageContext.request.contextPath}/productWatch.do?movieId=1"><span>지금 시청하기</span> <i class="fa fa-angle-right"></i></a>
 						</div>
 					</div>
 				</div>
@@ -29,7 +29,7 @@
 						</h2>
 						<p>새로운 조합을 이룬 어벤져스, 역대 최강 빌런 타노스에 맞서 세계의 운명이 걸린 인피니티 스톤을 향한 무한
 							대결이 펼쳐진다! 마블의 클라이맥스를 목격하라!</p>
-						<a href="#"><span>지금 시청하기</span> <i class="fa fa-angle-right"></i></a>
+						<a href="${pageContext.request.contextPath}/productWatch.do?movieId=11"><span>지금 시청하기</span> <i class="fa fa-angle-right"></i></a>
 					</div>
 				</div>
 			</div>
@@ -45,7 +45,7 @@
 						</h2>
 						<p>자신들이 특별하게 이어져있었음을 깨달은 ‘타키’는 ‘미츠하’를 만나러 가는데... 잊고 싶지 않은 사람
 							잊으면 안 되는 사람 너의 이름은?</p>
-						<a href="#"><span>지금 시청하기</span> <i class="fa fa-angle-right"></i></a>
+						<a href="${pageContext.request.contextPath}/productWatch.do?movieId=16"><span>지금 시청하기</span> <i class="fa fa-angle-right"></i></a>
 					</div>
 				</div>
 			</div>
