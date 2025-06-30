@@ -51,10 +51,10 @@
                         <nav class="header__menu mobile-menu">
                             <ul>
                                 <li class="active"><a href="${pageContext.request.contextPath}/main.do">Homepage</a></li>
-                                <li><a href="./categories.html">Categories <span class="arrow_carrot-down"></span></a>
+                                <li><a href="#" onclick="alert('개발중입니다.')">Categories <span class="arrow_carrot-down"></span></a>
                                     <ul class="dropdown">
-                                        <li><a href="./categories.html">Categories</a></li>
-                                        <li><a href="${pageContext.request.contextPath}/navigation.do">Navigation</a></li>
+                                        <li><a href="#" onclick="alert('개발중입니다.')">Categories</a></li>
+                                        <li><a href="${pageContext.request.contextPath}/navigation.do">오시는 길</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="${pageContext.request.contextPath}/index.jsp">Contacts</a></li>
@@ -88,7 +88,7 @@
                             <span style="color: white; margin-right: 10px;">
                                 ${logId}님
                             </span>
-                            <a href="${pageContext.request.contextPath}/logout.do">
+                            <a href="${pageContext.request.contextPath}/memberInfo.do?memberId=${logId}">
                                 <span class="icon_profile"></span>
                             </a>
                         </c:when>
@@ -142,9 +142,8 @@
                 <div class="footer__nav">
                     <ul>
                         <li class="active"><a href="${pageContext.request.contextPath}/main.do">Homepage</a></li>
-                        <li><a href="./categories.html">Categories</a></li>
-                        <li><a href="./blog.html">Our Blog</a></li>
-                        <li><a href="#">Contacts</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="${pageContext.request.contextPath}/index.jsp">Contacts</a></li>
                     </ul>
                 </div>
             </div>

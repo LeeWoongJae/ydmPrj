@@ -8,7 +8,7 @@
 
 	<!-- 로그인 -->
   <select id="login" parameterType="com.yedam.vo.MemberDTO" resultType="com.yedam.vo.MemberDTO">
-    SELECT member_id AS "memberId", password, name, email, phone, auth, TO_CHAR(join_date, 'yyyy-MM-dd') AS "joinDate", birth_date 
+    SELECT member_id AS "memberId", password, name, email, phone, auth, TO_CHAR(join_date, 'yyyy-MM-dd') AS "joinDate", birth_date, is_membership  
     FROM member 
     WHERE member_id = #{memberId} 
    </select>

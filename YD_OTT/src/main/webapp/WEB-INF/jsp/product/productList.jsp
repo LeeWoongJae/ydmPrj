@@ -70,13 +70,7 @@
 						data-setbg="${pageContext.request.contextPath}/img/trending/${mv.thumbnail}">
 						<a href="${pageContext.request.contextPath}/selectDetail.do?movieId=${mv.movieId}"
      						class="cover-link"></a>
-						<div class="ep">18 / 18</div>
-						<div class="comment">
-							<i class="fa fa-comments"></i> 11
-						</div>
-						<div class="view">
-							<i class="fa fa-eye"></i> 9141
-						</div>
+						
 					</div>
 					<div class="product__item__text">
 						<ul>
