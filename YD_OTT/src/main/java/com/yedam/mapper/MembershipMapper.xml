@@ -4,17 +4,32 @@
     "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.yedam.mapper.MembershipMapper">
-<insert id="registMembership" statementType="CALLABLE">
+<insert id="registMembership" parameterType="subScript">
 <!-- BEGIN ... END 로 동시 처리 -->
-BEGIN
-insert into subscription (member_id , plan_no , start_date , left_date) 
-values(#{id} , #{pno}, SYSDATE, SYSDATE+TO_NUMBER(#{lfdate}) );
-
-update member 
-set is_membership = 'O'
-where member_id = #{id};
-
-END;
+insert into subscription (member_id, plan_no, start_date, left_date) 
+values(#{memberId}, #{planNo}, SYSDATE, #{leftDate} )
 
 </insert>
+
+<delete id="removeMembership" parameterType="string">
+DELETE FROM subscription
+WHERE member_id = #{memberId}
+
+<!-- 구독리스트에서 내역 삭제 -->
+</delete>
+
+<select id="selectMembership" parameterType="string" resultType="subScript">
+SELECT member_id, plan_no, start_date, left_date 
+FROM subscription 
+<where>
+  <if test="memberId != null">
+    member_id = #{memberId}
+  </if>
+</where>
+
+<!-- 초기 로그인시 메인화면에서 멤버쉽 가입이 되어져있으면 멤버쉽 메뉴 옆에 구독정보뜨기 -->
+</select>
+
+
+
 </mapper>

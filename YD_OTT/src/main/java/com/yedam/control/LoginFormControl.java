@@ -14,8 +14,6 @@ public class LoginFormControl implements Control {
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 		req.getRequestDispatcher("member/loginForm.tiles").forward(req, resp);
-		// commit용
-
 	}
 
 }

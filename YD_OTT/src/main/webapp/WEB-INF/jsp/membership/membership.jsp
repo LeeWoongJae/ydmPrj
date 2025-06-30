@@ -118,6 +118,8 @@
 <h2 class="text-light fs-1" align="center">원하는 플랜을 선택하세요.</h2>
 
 </section>
+
+	<input type="hidden" name="memberId" value="${logId}">
 			<div class="row g-2 text-center">
 			<!-- 3일 맴버쉽 -->
 				<div class="col col-6">
@@ -204,16 +206,18 @@
 				</div>
 			</div>
 			<!-- session login id check -->
+			
 			<div>
 			<p>현재 로그인된 계정 아이디 : ${logId}</p>
 			</div>
 	<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
 		class="astro-vvvwv3sm"></script>
-<script src="${pageContext.request.contextPath}/js/membership.js"></script>		
 <script>
-
+let memberId = document.querySelector('input[name="memberId"]').value;
+console.log(memberId);
 </script>
+<script src="${pageContext.request.contextPath}/js/membership.js"></script>		
 </body>
 </html>
 

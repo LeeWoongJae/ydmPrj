@@ -49,15 +49,15 @@
                         <h3>Sign Up</h3>
                         <form name="signForm" action="registmember.do" method="post">
                             <div class="input__item">
-                                <input type="text" name="memberId" placeholder="Your ID">
+                                <input type="text" name="memberId" placeholder="Your ID" required>
                                 <span class="icon_profile"></span>
                             </div>
                             <div class="input__item">
-                                <input type="text" name="password" placeholder="Password">
+                                <input type="password" name="password" placeholder="Password" required>
                                 <span class="icon_lock"></span>
                             </div>
                             <div class="input__item">
-                                <input type="text" name="username" placeholder="Your Name">
+                                <input type="text" name="username" placeholder="Your Name" required>
                                 <span class="icon_profile"></span>
                             </div>
                             <div class="input__item">
@@ -127,7 +127,6 @@
 
     document.querySelector('input[name="memberId"]').addEventListener('change', function(e) {
         let user = e.target.value;
-
         fetch('checkId.do?id=' + user)
         .then(memberData => memberData.json())
         .then(result => {

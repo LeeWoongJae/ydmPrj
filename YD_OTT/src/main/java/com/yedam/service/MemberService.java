@@ -13,5 +13,9 @@ public interface MemberService {
 	public MemberDTO loginCheck(String memberId, String password); // 로그인
 	public int insertMember(MemberDTO member);  // 회원가입
 
+	public int updateMembership(String memberId);//맴버쉽 가입
+
+	public MemberDTO membershipChk(String memberId);// 맴버쉽 확인
+	public int ResetMembership(String memberId); // 맴버쉽 가입 취소
 	
 }

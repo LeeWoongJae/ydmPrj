@@ -99,6 +99,8 @@
 	</div>
 </section>
 <script>
+let logId = "${loginMember}";
+console.log("${loginMember}");
 console.log("현재 로그인 아이디 "+${logId});
 
 </script>

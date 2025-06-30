@@ -63,7 +63,7 @@
         <div class="row">
           <div class="col-lg-3">
             <div class="anime__details__pic set-bg"
-                 data-setbg="${pageContext.request.contextPath}/img/anime/details-pic1.jpg">
+                 data-setbg="${pageContext.request.contextPath}/img/anime/${mv.thumbnail}">
               <div class="comment"><i class="fa fa-comments"></i> ${fn:length(reviewList)}</div>
               <div class="view"><i class="fa fa-eye"></i> ${mv.viewCount}</div>
             </div>

@@ -11,55 +11,71 @@ import javax.servlet.http.HttpServletResponse;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.yedam.common.Control;
+import com.yedam.service.MemberService;
+import com.yedam.service.MemberServiceImpl;
 import com.yedam.service.MembershipService;
 import com.yedam.service.MembershipServiceImpl;
+import com.yedam.vo.MemberDTO;
 import com.yedam.vo.SubScriptionVO;
 
 public class RegistMembershipControl implements Control {
 
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		if(req.getMethod().equals("GET")) {
-			req.getRequestDispatcher("membership/membership.tiles").forward(req, resp);
-		}
-		else if (req.getMethod().equals("POST")) {
-			String memberId = req.getParameter("memberId");
-			String mbsCode = req.getParameter("mbscode");
-			String cnt; 
-			if(mbsCode.equals("1")) {
-				// 3일 이용권
-				cnt = "3";
-			}
-			else if(mbsCode.equals("2")) {
-				// 7일 이용권
-				cnt = "7";
-			}else if(mbsCode.equals("3")) {
-				// 15일 이용권
-				cnt = "15";
-			}else {
-				// 30일 이용권
-				cnt = "30";
-			}
-			SubScriptionVO ssp = new SubScriptionVO();
-			ssp.setMemberId(memberId);
-			ssp.setPlanNo(Integer.parseInt(mbsCode));
-			ssp.setLeftDate(cnt);
-			Gson gson = new GsonBuilder().setPrettyPrinting().create();
-			Map<String , Object> map = new HashMap<>();
-			MembershipService svc = new MembershipServiceImpl();
-			if(svc.registMembership(memberId, Integer.parseInt(mbsCode), cnt)==1) {
-				map.put("retVal", ssp);
-				map.put("retCode", "Success");
-			}else {
-				map.put("retCode", "Fail");
-			}
-			String json = gson.toJson(map);
-			System.out.println("json : "+json);
-			resp.getWriter().print(json);
-			req.getRequestDispatcher("member/movieList.tiles").forward(req, resp);
-			
-		}
-		
+		resp.setContentType("text/json;charset=utf-8");
+			// 파라메터 가져오기
+						String memberId = req.getParameter("memberId");
+						String planNo = req.getParameter("planNo");
+						String leftDate=""; // 각 멤버쉽 코드별 이용가능 일수 
+						if(planNo.equals("1")) {
+							// 3일 이용권
+							leftDate = "3";
+						}
+						else if(planNo.equals("2")) {
+							// 7일 이용권
+							leftDate = "7";
+						}else if(planNo.equals("3")) {
+							// 15일 이용권
+							leftDate = "15";
+						}else {
+							// 30일 이용권
+							leftDate = "30";
+						}
+						System.out.println("memberId:"+memberId+"planNo:"+planNo+"leftDate:"+leftDate);
+						SubScriptionVO ssp = new SubScriptionVO();
+						ssp.setMemberId(memberId);
+						ssp.setPlanNo(Integer.parseInt(planNo));
+						ssp.setLeftDate(leftDate);
+						Gson gson = new GsonBuilder().setPrettyPrinting().create();
+						Map<String , Object> map = new HashMap<>();
+						MemberService msv = new MemberServiceImpl(); // member의 맴버쉽 상태를 변경
+						MembershipService svc = new MembershipServiceImpl(); // 맴버쉽 가입 추가
+						MemberDTO member = msv.membershipChk(memberId); // 맴버쉽 가입 여부 확인(member_id , is_membership 정보 저장)
+						if(member != null & member.getIsMembership().equals("X")) { // is_membership == 'X' 라면
+							if(svc.registMembership(ssp)==1) {
+								if(msv.updateMembership(memberId)==1) {
+									System.out.println("Update completed membership state !");
+								}else if(msv.updateMembership(memberId)!=1) {
+									System.out.println("Update failed membership state !");
+								}
+								map.put("retVal", ssp);
+								map.put("retCode", "Success");
+							}else {
+								map.put("retCode", "Fail");
+							}
+							// 결과 상태를 json객체로 생성
+							String json = gson.toJson(map);
+							System.out.println("json : "+json);
+							resp.getWriter().print(json);
+						}else if(member == null || member.getIsMembership().equals("O")){
+							map.put("retVal", ssp);
+							map.put("retCode", "Fail");
+							String json = gson.toJson(map);
+							System.out.println(json);
+							resp.getWriter().print(json);
+						}
+						//req.getRequestDispatcher("/main.do").forward(req, resp);
+						//resp.sendRedirect("main.do");
 
 	}
 

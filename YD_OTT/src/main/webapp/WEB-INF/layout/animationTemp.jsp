@@ -11,7 +11,7 @@
     <meta name="keywords" content="Anime, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Anime | Template</title>
+    <title>YDFLIX -YEDAM NETFLIX-</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -54,9 +54,10 @@
                                 <li><a href="./categories.html">Categories <span class="arrow_carrot-down"></span></a>
                                     <ul class="dropdown">
                                         <li><a href="./categories.html">Categories</a></li>
+                                        <li><a href="${pageContext.request.contextPath}/navigation.do">Navigation</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Contacts</a></li>
+                                <li><a href="${pageContext.request.contextPath}/index.jsp">Contacts</a></li>
                                 <c:if test="${logId != null}">
                                 </c:if>
                                 <c:choose>
@@ -64,11 +65,14 @@
                                             <li><a href="${pageContext.request.contextPath}/signUp.do">Sign Up</a></li>
                                             <li><a href="${pageContext.request.contextPath}/loginForm.do">Login</a></li>
                                         </c:when>
+                                        
                                         <c:otherwise>
                                             <li><a href="${pageContext.request.contextPath}/logout.do">Logout</a></li>
-                                			<li><a href="${pageContext.request.contextPath}/membership.do">Membership</a></li>
+                                			<li><a href="${pageContext.request.contextPath}/membership.do">Membership
+                                			<c:if test="${mbsName != null}">(${mbsName})</c:if></a></li>
                                         </c:otherwise>
                                     </c:choose>
+                               
                             </ul>
                         </nav>
                     </div>
@@ -175,6 +179,7 @@
 <script src="${pageContext.request.contextPath}/js/jquery.slicknav.js"></script>
 <script src="${pageContext.request.contextPath}/js/owl.carousel.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/main.js"></script>
+<script src="${pageContext.request.contextPath}/js/membership.js"></script>
 <script>
 let logId = "${loginMember}";
 console.log("login_id:"+logId);
