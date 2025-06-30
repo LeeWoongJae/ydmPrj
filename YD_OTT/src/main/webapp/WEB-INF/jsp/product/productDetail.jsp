@@ -154,7 +154,7 @@
       const reviewId = $(this).data('id');
       $.post('ajaxDeleteReview.do', {
         reviewId: reviewId,
-        memberId: reviewId
+        memberId: "${sessionScope.logId}"
       }, function(res) {
         alert("삭제되었습니다.");
         location.reload();
