@@ -82,7 +82,7 @@
                     <h6>${rev.memberId} - <span>${rev.regDate}</span></h6>
                     <p>${rev.content}</p>
                     <p>⭐ ${rev.star}점</p>
-                    <c:if test="${rev.memberId == sessionScope.logId}">
+                    <c:if test="${rev.memberId == sessionScope.logId or logId eq 'admin'}">
                       <button class="btn btn-warning btn-sm edit-btn"
                         data-id="${rev.reviewId}" data-content="${rev.content}" data-star="${rev.star}">
                         수정
@@ -154,7 +154,7 @@
       const reviewId = $(this).data('id');
       $.post('ajaxDeleteReview.do', {
         reviewId: reviewId,
-        memberId: '${sessionScope.logId}'
+        memberId: reviewId
       }, function(res) {
         alert("삭제되었습니다.");
         location.reload();
