@@ -45,7 +45,9 @@ public class SelectDetailControl implements Control {
         // 2. 리뷰 목록 조회
         ReviewService revuService = new ReviewServiceImpl();
         List<ReviewVO> reviewList = revuService.reviewList(movieId);
-
+        
+        
+        
         // 3. 별점 평균 계산
         double avgStar = 0;
         if (!reviewList.isEmpty()) {
@@ -60,7 +62,7 @@ public class SelectDetailControl implements Control {
         req.setAttribute("mv", mvo); // 영화 정보
         req.setAttribute("reviewList", reviewList); // 리뷰 목록
         req.setAttribute("avgStar", avgStar); // 평균 별점
-
+        
         // 5. forward
         req.getRequestDispatcher("product/productDetail.tiles").forward(req, resp);
     }

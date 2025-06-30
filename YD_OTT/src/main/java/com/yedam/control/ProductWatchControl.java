@@ -41,7 +41,6 @@ public class ProductWatchControl implements Control {
         // JSP로 상세 페이지 포워딩
         req.setAttribute("mv", mvo);
         req.getRequestDispatcher("product/productWatch.tiles").forward(req, resp);
-
    }
 
 }

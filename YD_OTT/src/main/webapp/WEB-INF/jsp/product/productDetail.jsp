@@ -11,8 +11,26 @@
   <link rel="stylesheet" href="${pageContext.request.contextPath}/css/font-awesome.min.css">
   <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
-
 <body>
+  <div class="breadcrumb-option">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb__links">
+                        <a href="main.do"><i class="fa fa-home"></i> Home</a>
+                        <a href="#">Categories</a>
+                        <a href="#">${mv.genreId == 1 ? '액션' :
+    mv.genreId == 2 ? '코미디' :
+    mv.genreId == 3 ? '공포'  :
+    mv.genreId == 4 ? 'SF'    :
+    mv.genreId == 5 ? '판타지':
+    mv.genreId == 6 ? '로맨스':
+    mv.genreId == 7 ? '스릴러' : '기타'} </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
   <section class="anime-details spad">
     <div class="container">
       <div class="anime__details__content">

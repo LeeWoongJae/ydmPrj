@@ -37,4 +37,10 @@ public class ReviewServiceImpl implements ReviewService {
     public int updateReview(ReviewVO vo) {
         return mapper.updateReview(vo);
     }
+
+	@Override
+	public int revucount(String movieId) {
+		// TODO Auto-generated method stub
+		return mapper.revucount(movieId);
+	}
 }

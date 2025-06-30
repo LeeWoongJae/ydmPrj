@@ -40,6 +40,11 @@
     star_count = NVL(star_count, 0) + 1
   WHERE movie_id = #{movieId}
 </update>
-    
 
+<select id ="revucount" parameterType="string" resultType="int">
+<!--  리뷰 숫자를 가져오는 쿼리 -->
+SELECT COUNT(review_id) 
+FROM review 
+WHERE movie_id = #{id}
+</select>
 </mapper>
