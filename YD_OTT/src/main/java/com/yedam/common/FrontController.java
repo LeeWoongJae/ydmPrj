@@ -24,6 +24,7 @@ import com.yedam.control.MovieListControl;
 import com.yedam.control.NavigationControl;
 import com.yedam.control.PaymentControl;
 import com.yedam.control.PlayProdControl;
+import com.yedam.control.ProductWatchControl;
 import com.yedam.control.RegistMemberControl;
 import com.yedam.control.RegistMembershipControl;
 import com.yedam.control.RemoveMemberControl;
@@ -101,7 +102,7 @@ public class FrontController extends HttpServlet{
 		map.put("/watchList.do", new WatchListControl()); // 시청기록 리스트
 		map.put("/addWatchProd.do", new AddWatchProdControl()); // 시청기록 추가
 		map.put("/playProd.do", new PlayProdControl()); // 재생
-		
+		map.put("/productWatch.do", new ProductWatchControl()); // 재생
 		
 		
 		

@@ -38,7 +38,7 @@ public class LoginControl implements Control {
         MemberDTO member = service.loginCheck(memberId , password);
         SubScriptionVO subInfo = msv.selectMembership(memberId);
         HttpSession session = req.getSession();// 웹 브라우저 쿠키를 저장
-		session.setAttribute("logId", member.getMemberId()); // session에 로그인된 id 저장
+        session.setAttribute("logId", member.getMemberId()); // session에 로그인된 id 저장
 		if(member.getIsMembership().equals("O")) {
 			planNo = subInfo.getPlanNo();
 			switch(planNo) {

@@ -19,7 +19,7 @@
         <div class="row">
           <div class="col-lg-3">
             <div class="anime__details__pic set-bg"
-                 data-setbg="${pageContext.request.contextPath}/img/anime/details-pic1.jpg">
+                 data-setbg="${pageContext.request.contextPath}/img/anime/${mv.thumbnail}">
               <div class="comment"><i class="fa fa-comments"></i> ${fn:length(reviewList)}</div>
               <div class="view"><i class="fa fa-eye"></i> ${mv.viewCount}</div>
             </div>
@@ -60,7 +60,7 @@
                 <a href="addWish.do?movieId=${mv.movieId}" class="follow-btn">
                   <i class="fa fa-heart-o"></i> 찜 하기
                 </a>
-                <a href="playProd.do?movieId=${mv.movieId}" class="watch-btn">
+                <a href="${pageContext.request.contextPath}/productWatch.do?movieId=${mv.movieId}" class="watch-btn">
                   <span>지금 시청하기</span> <i class="fa fa-angle-right"></i>
                 </a>
               </div>
