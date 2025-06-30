@@ -43,7 +43,7 @@ object-fit: cover;
 <th scope="col">팀 명</th>
 <th scope="col">이름</th>
 <th scope="col">역할</th>
-<th scope="col">GITHURB</th>
+<th scope="col">GITHUB</th>
 </tr>
 </thead>
 <tbody>
