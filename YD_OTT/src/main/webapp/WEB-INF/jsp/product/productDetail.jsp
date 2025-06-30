@@ -103,11 +103,11 @@
               <div class="anime__details__btn">
                 <a href="addWish.do?movieId=${mv.movieId}" class="follow-btn">
                   <i class="fa fa-heart-o"></i> 찜 하기
-                </a> 
-                <a	href="${pageContext.request.contextPath}/productWatch.do?movieId=${mv.movieId}"
-					class="watch-btn"><span>지금 시청하기</span>
-					<i class="fa fa-angle-right"></i></a>
-			  </div>
+                </a>
+                <a href="${pageContext.request.contextPath}/productWatch.do?movieId=${mv.movieId}" class="watch-btn">
+                  <span>지금 시청하기</span> <i class="fa fa-angle-right"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>

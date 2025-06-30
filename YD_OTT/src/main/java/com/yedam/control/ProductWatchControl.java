@@ -13,9 +13,9 @@ import com.yedam.vo.MovieVO;
 
 public class ProductWatchControl implements Control {
 
-	@Override
-	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// 파라미터 movieId 받기
+   @Override
+   public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+      // 파라미터 movieId 받기
         String movieIdStr = req.getParameter("movieId");
         if (movieIdStr == null || movieIdStr.isEmpty()) {
             resp.sendError(HttpServletResponse.SC_BAD_REQUEST, "movieId parameter missing");
@@ -41,7 +41,6 @@ public class ProductWatchControl implements Control {
         // JSP로 상세 페이지 포워딩
         req.setAttribute("mv", mvo);
         req.getRequestDispatcher("product/productWatch.tiles").forward(req, resp);
-
-	}
+   }
 
 }
