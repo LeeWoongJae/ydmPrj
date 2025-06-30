@@ -1133,6 +1133,12 @@ ol {
 	width: 50px;
 	border-radius: 50%;
 }
+.anime__review__item__mypage img {
+	height: 100%;
+	width: 80%;
+	border-radius: 50%;
+}
+
 
 .anime__review__item__text {
 	overflow: hidden;

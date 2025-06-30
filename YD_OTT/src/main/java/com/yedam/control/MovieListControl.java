@@ -13,6 +13,8 @@ import com.yedam.service.MemberService;
 import com.yedam.service.MemberServiceImpl;
 import com.yedam.service.MovieService;
 import com.yedam.service.MovieServiceImpl;
+import com.yedam.service.ReviewService;
+import com.yedam.service.ReviewServiceImpl;
 import com.yedam.vo.MemberDTO;
 import com.yedam.vo.MovieVO;
 
@@ -26,17 +28,19 @@ public class MovieListControl implements Control {
         MovieService svc = new MovieServiceImpl();
         List<MovieVO> list = svc.movieList();
         System.out.println(list.size()); 
-        
+        ReviewService revuService = new ReviewServiceImpl();
         // 2. request 범위에 세팅
         req.setAttribute("list", list);
         
+        // 리뷰 수량 넘기기
+        int revuCnt = revuService.revucount(memberId);
         
         MemberService msv = new MemberServiceImpl();
         MemberDTO member = msv.login(memberId);
         HttpSession session = req.getSession();
         session.setAttribute("logId", member.getMemberId());
         session.setAttribute("isMembership", member.getIsMembership());
-        
+        session.setAttribute("revuCnt", revuCnt);
         
         // 3. 같은 요청 안에서 Tiles-JSP로 forward
         req.getRequestDispatcher("WEB-INF/jsp/product/productList.jsp")

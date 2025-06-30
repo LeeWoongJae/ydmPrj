@@ -16,4 +16,8 @@ public interface ReviewService {
     
     // 리뷰 수정
     int updateReview(ReviewVO vo);
+    
+    // 리뷰 수 가져오기
+    int revucount(String movieId);
+    
 }
