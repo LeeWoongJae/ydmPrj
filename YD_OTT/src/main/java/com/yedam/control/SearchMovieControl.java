@@ -17,12 +17,10 @@ public class SearchMovieControl implements Control {
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// 
-		String kw = req.getParameter("keyword");
-		
+		String title = req.getParameter("title");
 		MovieService msv = new MovieServiceImpl();
-		MovieVO mvList = msv.getKeyword(kw);
-		
-		req.setAttribute("mlist", mvList);
+		List<MovieVO> mv = msv.getKeyword(title);
+		req.setAttribute("mlist", mv);
 		req.getRequestDispatcher("product/searchMovie.tiles").forward(req, resp);
 
 	}

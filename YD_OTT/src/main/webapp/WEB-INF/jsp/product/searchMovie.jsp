@@ -9,30 +9,32 @@
 		</div>
 	</div>
 	<div class="row">
+	<c:forEach items="${mlist}"  var="mv">
 			<div class="col-lg-4 col-md-6 col-sm-6">
 				<div class="product__item">
 					<div class="product__item__pic set-bg"
-						data-setbg="${pageContext.request.contextPath}/img/trending/${mlist.thumbnail}">
-						<a href="${pageContext.request.contextPath}/selectDetail.do?movieId=${mlist.movieId}"
+						data-setbg="${pageContext.request.contextPath}/img/trending/${mv.thumbnail}">
+						<a href="${pageContext.request.contextPath}/selectDetail.do?movieId=${mv.movieId}"
      						class="cover-link"></a>
 						
 					</div>
 					<div class="product__item__text">
 						<ul>
-							<li>${mlist.genreId == 1 ? '액션' :
-    mlist.genreId == 2 ? '코미디' :
-    mlist.genreId == 3 ? '공포'  :
-    mlist.genreId == 4 ? 'SF'    :
-    mlist.genreId == 5 ? '판타지':
-    mlist.genreId == 6 ? '로맨스':
-    mlist == 7 ? '스릴러' : '기타'} </li>
+							<li>${mv.genreId == 1 ? '액션' :
+    mv.genreId == 2 ? '코미디' :
+    mv.genreId == 3 ? '공포'  :
+    mv.genreId == 4 ? 'SF'    :
+    mv.genreId == 5 ? '판타지':
+    mv.genreId == 6 ? '로맨스':
+    mv.genreId == 7 ? '스릴러' : '기타'} </li>
 							<li>Movie</li>
 						</ul>
 						<h5>
-							<a href="#"><c:out value="${mlist.title}" /></a>
+							<a href="#"><c:out value="${mv.title}" /></a>
 						</h5>
 					</div>
 				</div>
 			</div>
+			</c:forEach>
 	</div>
 </section>

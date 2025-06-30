@@ -48,9 +48,9 @@ SELECT m.movie_id,
            m.view_count,
            m.duration,
            TO_CHAR(m.release_date, 'YYYY-MM-DD') AS releaseDate,
-           g.genre_name AS genreName
+           g.genre_name AS genreName 
     FROM movie m
     JOIN genre g ON m.genre_id = g.genre_id
-    WHERE m.title = '%'||#{title}||'%'
+    WHERE m.title LIKE '%'||#{title}||'%'
 </select>
 </mapper>

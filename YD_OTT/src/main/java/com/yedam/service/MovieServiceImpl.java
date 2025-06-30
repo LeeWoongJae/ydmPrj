@@ -25,10 +25,10 @@ public class MovieServiceImpl implements MovieService {
 	}
 
 	@Override
-	public MovieVO getKeyword(String keyword) {
+	public List<MovieVO> getKeyword(String title) {
 		// TODO Auto-generated method stub
-		//List<MovieVO> list = mapper.getMovie(keyword);
-		return mapper.getMovie(keyword);
+		
+		return mapper.getMovie(title);
 	}
 
 }
