@@ -149,7 +149,7 @@ object-fit: cover;
         <td>Day 13</td>
         <td>월</td>
         <td><strong></strong> 프로젝트 발표용 PPT 작성 / 페지이 구현 에러 체크</td>
-        <td class="table-warning">예정</td>
+        <td class="table-warning">완료</td>
       </tr>
       <tr>
         <td>FIN</td>
