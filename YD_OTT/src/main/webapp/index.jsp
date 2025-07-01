@@ -43,7 +43,7 @@ object-fit: cover;
 <th scope="col">팀 명</th>
 <th scope="col">이름</th>
 <th scope="col">역할</th>
-<th scope="col">GITHURB</th>
+<th scope="col">GITHUB</th>
 </tr>
 </thead>
 <tbody>
@@ -149,13 +149,13 @@ object-fit: cover;
         <td>Day 13</td>
         <td>월</td>
         <td><strong></strong> 프로젝트 발표용 PPT 작성 / 페지이 구현 에러 체크</td>
-        <td class="table-warning">예정</td>
+        <td class="table-success">완료</td>
       </tr>
       <tr>
         <td>FIN</td>
         <td>화</td>
         <td><strong>FIN</strong> 프로젝트 발표 및 시연</td>
-        <td class="table-warning">예정</td>
+        <td class="table-warning">진행예정</td>
       </tr>
     </tbody>
   </table>
