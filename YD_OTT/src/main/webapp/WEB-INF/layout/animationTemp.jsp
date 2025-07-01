@@ -182,6 +182,8 @@
 <script>
 let logId = "${loginMember}";
 console.log("login_id:"+logId);
+let titleVal = document.querySelector('input[name="title"]').value;
+console.log(titleVal);
 </script>
 </body>
 

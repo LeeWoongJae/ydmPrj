@@ -21,6 +21,7 @@ public class SearchMovieControl implements Control {
 		MovieService msv = new MovieServiceImpl();
 		List<MovieVO> mv = msv.getKeyword(title);
 		req.setAttribute("mlist", mv);
+		req.setAttribute("title", title);
 		req.getRequestDispatcher("product/searchMovie.tiles").forward(req, resp);
 
 	}

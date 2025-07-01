@@ -17,7 +17,7 @@
 							<h3>${member.memberId} 님의 마이페이지.</h3>
 							<span></span>
 						</div>
-						<p>산은 산이요, 물은 물이로다</p>
+						<p>당신의 하루를 책임지는, Premium Contents Hub</p>
 						<div class="anime__details__widget">
 							<div class="row">
 								<div class="col-lg-6 col-md-6">

@@ -5,7 +5,7 @@
 	<section class="product spad">
 	<div class="col-lg-8 col-md-8 col-sm-8">
 		<div class="section-title">
-			<h4>Search Result</h4>
+			<h4>'${title}'에 대한 검색결과</h4>
 		</div>
 	</div>
 	<div class="row">
