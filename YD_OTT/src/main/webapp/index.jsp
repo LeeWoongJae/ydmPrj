@@ -155,7 +155,7 @@ object-fit: cover;
         <td>FIN</td>
         <td>화</td>
         <td><strong>FIN</strong> 프로젝트 발표 및 시연</td>
-        <td class="table-warning">진행예정</td>
+        <td class="table-warning">완료</td>
       </tr>
     </tbody>
   </table>
