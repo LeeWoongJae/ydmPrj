@@ -14,15 +14,16 @@ import com.yedam.vo.MovieVO;
 
 public class SearchMovieControl implements Control {
 
-	@Override
-	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// 
-		String title = req.getParameter("title");
-		MovieService msv = new MovieServiceImpl();
-		List<MovieVO> mv = msv.getKeyword(title);
-		req.setAttribute("mlist", mv);
-		req.getRequestDispatcher("product/searchMovie.tiles").forward(req, resp);
+   @Override
+   public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+      // 
+      String title = req.getParameter("title");
+      MovieService msv = new MovieServiceImpl();
+      List<MovieVO> mv = msv.getKeyword(title);
+      req.setAttribute("mlist", mv);
+      req.setAttribute("title", title);
+      req.getRequestDispatcher("product/searchMovie.tiles").forward(req, resp);
 
-	}
+   }
 
 }
