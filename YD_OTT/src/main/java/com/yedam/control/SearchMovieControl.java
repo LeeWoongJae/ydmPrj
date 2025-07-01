@@ -13,7 +13,6 @@ import com.yedam.service.MovieServiceImpl;
 import com.yedam.vo.MovieVO;
 
 public class SearchMovieControl implements Control {
-
    @Override
    public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
       // 
