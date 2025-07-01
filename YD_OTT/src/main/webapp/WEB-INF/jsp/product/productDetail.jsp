@@ -81,12 +81,16 @@
                 </div>
               </div>
               <div class="anime__details__btn">
+              <c:if test="${!empty logId}">
                 <a href="#" class="follow-btn">
                   <i class="fa fa-heart-o"></i> 찜 하기
                 </a>
+                </c:if>
+                <c:if test="${!empty logId and loginMember.isMembership eq 'O'}">
                 <a href="${pageContext.request.contextPath}/productWatch.do?movieId=${mv.movieId}" class="watch-btn">
                   <span>지금 시청하기</span> <i class="fa fa-angle-right"></i>
                 </a>
+                </c:if>
               </div>
             </div>
           </div>
