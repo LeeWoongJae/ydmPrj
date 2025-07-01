@@ -43,19 +43,19 @@ public class LoginControl implements Control {
          planNo = subInfo.getPlanNo();
          switch(planNo) {
          case 1 : {
-            str = "3 DAYS"; // session에 로그인된 id 저장
+            str = "3 DAYS";
             break;
          }
          case 2 : {
-            str = "7 DAYS"; // session에 로그인된 id 저장
+            str = "7 DAYS";
             break;
          }
          case 3 : {
-            str = "15 DAYS"; // session에 로그인된 id 저장
+            str = "15 DAYS";
             break;
          }
          case 4 : {
-            str = "30 DAYS"; // session에 로그인된 id 저장
+            str = "30 DAYS";
             break;
          }
          default :{
@@ -63,7 +63,7 @@ public class LoginControl implements Control {
             break;
          }
          }
-         session.setAttribute("mbsName", str); // session에 로그인된 id 저장
+         session.setAttribute("mbsName", str);
          
       }
       

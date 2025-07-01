@@ -220,13 +220,3 @@ console.log(memberId);
 <script src="${pageContext.request.contextPath}/js/membership.js"></script>		
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
