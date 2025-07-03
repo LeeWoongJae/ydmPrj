@@ -19,8 +19,8 @@ h3 , h2 {
  padding : 30%;
 }
 img{
- width: 100%;
-  height: 100%;
+ width: 1255px;
+  height: 45%;
 object-fit: cover;
  
 }
@@ -28,6 +28,7 @@ object-fit: cover;
     padding : 30px;
     margin : auto;
 }
+/**td:first-child{	text-align : center;}*/
 </style>
 
 
@@ -48,16 +49,16 @@ object-fit: cover;
 </thead>
 <tbody>
 <tr>
-<td scope="row">OTT 사이트</td><td>YEDAM / 집</td><td>YDFLIX</td><td>이웅재</td><td>팀장</td><td><a href="https://www.github.com/LeeWoongJae" target="_blank">github.com/LeeWoongJae</a></td>
+<td scope="row">YDFLIX</td><td>YEDAM / 집</td><td>YDFLIX</td><td>이웅재</td><td>팀장</td><td><a href="https://www.github.com/LeeWoongJae" target="_blank">github.com/LeeWoongJae</a></td>
 </tr>
 <tr>
-<td scope="row">OTT 사이트</td><td>YEDAM / 집</td><td>YDFLIX</td><td>김상우</td><td>팀원</td><td><a href="https://www.github.com/ksw5861" target="_blank">github.com/ksw5861</a></td>
+<td scope="row">YDFLIX</td><td>YEDAM / 집</td><td>YDFLIX</td><td>김상우</td><td>팀원</td><td><a href="https://www.github.com/ksw5861" target="_blank">github.com/ksw5861</a></td>
 </tr>
 <tr>
-<td scope="row">OTT 사이트</td><td>YEDAM / 집</td><td>YDFLIX</td><td><p><abbr title='...'>김준현</abbr></p></td><td>-</td><td><a href="#"></a></td>
+<td scope="row">YDFLIX</td><td>YEDAM / 집</td><td>YDFLIX</td><td><p><abbr title='...'>김준현</abbr></p></td><td>-</td><td><a href="#"></a></td>
 </tr>
 <tr>
-<td scope="row">OTT 사이트</td><td>YEDAM / 집</td><td>YDFLIX</td><td>이명훈</td><td>팀원</td><td><a href="https://www.github.com/hun7589" target="_blank">github.com/hun7589</a></td>
+<td scope="row">YDFLIX</td><td>YEDAM / 집</td><td>YDFLIX</td><td>이명훈</td><td>팀원</td><td><a href="https://www.github.com/hun7589" target="_blank">github.com/hun7589</a></td>
 </tr>
 </tbody>
 </table>
@@ -155,7 +156,7 @@ object-fit: cover;
         <td>FIN</td>
         <td>화</td>
         <td><strong>FIN</strong> 프로젝트 발표 및 시연</td>
-        <td class="table-warning">완료</td>
+        <td class="table-success">완료</td>
       </tr>
     </tbody>
   </table>
